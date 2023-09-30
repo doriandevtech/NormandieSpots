@@ -55,6 +55,9 @@
 			children = (
 				F41905CC2AC86A7B000E3A0B /* NormandieSpotsApp.swift */,
 				F41905CE2AC86A7B000E3A0B /* ContentView.swift */,
+				F41905DB2AC86E6A000E3A0B /* Views */,
+				F41905DC2AC86E6F000E3A0B /* Models */,
+				F41905DD2AC86E75000E3A0B /* Ressources */,
 				F41905D02AC86A7C000E3A0B /* Assets.xcassets */,
 				F41905D22AC86A7C000E3A0B /* Preview Content */,
 			);
@@ -67,6 +70,27 @@
 				F41905D32AC86A7C000E3A0B /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F41905DB2AC86E6A000E3A0B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F41905DC2AC86E6F000E3A0B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F41905DD2AC86E75000E3A0B /* Ressources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Ressources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
