@@ -19,6 +19,7 @@
 		F41905CE2AC86A7B000E3A0B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F41905D02AC86A7C000E3A0B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F41905D32AC86A7C000E3A0B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F41905DA2AC86CB1000E3A0B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +36,7 @@
 		F41905C02AC86A7B000E3A0B = {
 			isa = PBXGroup;
 			children = (
+				F41905DA2AC86CB1000E3A0B /* README.md */,
 				F41905CB2AC86A7B000E3A0B /* NormandieSpots */,
 				F41905CA2AC86A7B000E3A0B /* Products */,
 			);
