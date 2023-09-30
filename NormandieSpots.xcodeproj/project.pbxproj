@@ -11,6 +11,7 @@
 		F41905CF2AC86A7B000E3A0B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41905CE2AC86A7B000E3A0B /* ContentView.swift */; };
 		F41905D12AC86A7C000E3A0B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F41905D02AC86A7C000E3A0B /* Assets.xcassets */; };
 		F41905D42AC86A7C000E3A0B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F41905D32AC86A7C000E3A0B /* Preview Assets.xcassets */; };
+		F41905DF2AC877AB000E3A0B /* placesDatas.json in Resources */ = {isa = PBXBuildFile; fileRef = F41905DE2AC877AB000E3A0B /* placesDatas.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		F41905D02AC86A7C000E3A0B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F41905D32AC86A7C000E3A0B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F41905DA2AC86CB1000E3A0B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		F41905DE2AC877AB000E3A0B /* placesDatas.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = placesDatas.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 		F41905DD2AC86E75000E3A0B /* Ressources */ = {
 			isa = PBXGroup;
 			children = (
+				F41905DE2AC877AB000E3A0B /* placesDatas.json */,
 			);
 			path = Ressources;
 			sourceTree = "<group>";
@@ -153,6 +156,7 @@
 			files = (
 				F41905D42AC86A7C000E3A0B /* Preview Assets.xcassets in Resources */,
 				F41905D12AC86A7C000E3A0B /* Assets.xcassets in Resources */,
+				F41905DF2AC877AB000E3A0B /* placesDatas.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
