@@ -12,6 +12,8 @@
 		F41905D12AC86A7C000E3A0B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F41905D02AC86A7C000E3A0B /* Assets.xcassets */; };
 		F41905D42AC86A7C000E3A0B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F41905D32AC86A7C000E3A0B /* Preview Assets.xcassets */; };
 		F41905DF2AC877AB000E3A0B /* placesDatas.json in Resources */ = {isa = PBXBuildFile; fileRef = F41905DE2AC877AB000E3A0B /* placesDatas.json */; };
+		F41905E12AC88339000E3A0B /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41905E02AC88339000E3A0B /* Place.swift */; };
+		F41905E32AC88600000E3A0B /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41905E22AC88600000E3A0B /* ModelData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		F41905D32AC86A7C000E3A0B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F41905DA2AC86CB1000E3A0B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		F41905DE2AC877AB000E3A0B /* placesDatas.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = placesDatas.json; sourceTree = "<group>"; };
+		F41905E02AC88339000E3A0B /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		F41905E22AC88600000E3A0B /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +62,7 @@
 				F41905CC2AC86A7B000E3A0B /* NormandieSpotsApp.swift */,
 				F41905CE2AC86A7B000E3A0B /* ContentView.swift */,
 				F41905DB2AC86E6A000E3A0B /* Views */,
-				F41905DC2AC86E6F000E3A0B /* Models */,
+				F41905DC2AC86E6F000E3A0B /* Model */,
 				F41905DD2AC86E75000E3A0B /* Ressources */,
 				F41905D02AC86A7C000E3A0B /* Assets.xcassets */,
 				F41905D22AC86A7C000E3A0B /* Preview Content */,
@@ -81,11 +85,13 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		F41905DC2AC86E6F000E3A0B /* Models */ = {
+		F41905DC2AC86E6F000E3A0B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F41905E02AC88339000E3A0B /* Place.swift */,
+				F41905E22AC88600000E3A0B /* ModelData.swift */,
 			);
-			path = Models;
+			path = Model;
 			sourceTree = "<group>";
 		};
 		F41905DD2AC86E75000E3A0B /* Ressources */ = {
@@ -167,8 +173,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F41905E12AC88339000E3A0B /* Place.swift in Sources */,
 				F41905CF2AC86A7B000E3A0B /* ContentView.swift in Sources */,
 				F41905CD2AC86A7B000E3A0B /* NormandieSpotsApp.swift in Sources */,
+				F41905E32AC88600000E3A0B /* ModelData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
