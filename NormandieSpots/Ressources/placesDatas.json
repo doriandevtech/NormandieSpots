@@ -10,7 +10,7 @@
             "longitude": 49.707308,
             "latitude": 0.193583
         },
-        "description": "Étretat [etʁəta] est une commune française située dans le département de la Seine-Maritime en région Normandie. Jadis modeste village de pêcheurs, Étretat devient au XIXᵉ siècle une station balnéaire de renom. Jacques Offenbach ou Guy de Maupassant y organisent des fêtes pour leurs cercles d'amis",
+        "description": "Étretat [etʁəta] est une commune française située dans le département de la Seine-Maritime en région Normandie. Jadis modeste village de pêcheurs, Étretat devient au XIXᵉ siècle une station balnéaire de renom. Jacques Offenbach ou Guy de Maupassant y organisent des fêtes pour leurs cercles d'amis.",
         "imageName": "etretat"
     },
     {
@@ -38,7 +38,7 @@
             "longitude": 49.870494,
             "latitude": 0.801649
         },
-        "description": "Veules-les-Roses est une station balnéaire et une commune française, située en bord de mer, dans le département de la Seine-Maritime, en région Normandie. Elle compte parmi « Les Plus Beaux Villages de France ». Ses habitants sont les Veulais. »,
+        "description": "Veules-les-Roses est une station balnéaire et une commune française, située en bord de mer, dans le département de la Seine-Maritime, en région Normandie. Elle compte parmi « Les Plus Beaux Villages de France ». Ses habitants sont les Veulais.",
         "imageName": "veulesLesRoses"
     },
     {
@@ -52,7 +52,7 @@
             "longitude": 49.494884,
             "latitude": 0.108876
         },
-        "description": "Le Havre est une commune du nord-ouest de la France située dans le département de la Seine-Maritime en région Normandie. Elle se trouve sur la rive droite de l'estuaire de la Seine, au bord de la Manche. »,
+        "description": "Le Havre est une commune du nord-ouest de la France située dans le département de la Seine-Maritime en région Normandie. Elle se trouve sur la rive droite de l'estuaire de la Seine, au bord de la Manche.",
         "imageName": "leHavre"
     },
     {
@@ -66,7 +66,7 @@
             "longitude": 49.597104,
             "latitude": 0.264312
         },
-        "description": "Hermeville est une commune française située dans le département de la Seine-Maritime en région Normandie. »,
+        "description": "Hermeville est une commune française située dans le département de la Seine-Maritime en région Normandie.",
         "imageName": "hermeville"
     }
 ]
