@@ -8,11 +8,39 @@
 import SwiftUI
 
 struct PlaceList: View {
+    @EnvironmentObject var modelData: ModelData
+    
+    @State private var showFavOnly = false
+    
+    var filteredPlaces: [Place] {
+        modelData.places.filter { place in
+            (!showFavOnly || place.isFavorite)
+        }
+    }
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            List {
+                Toggle(isOn: $showFavOnly, label: {
+                    Text("Favoris")
+                })
+                
+                ForEach(filteredPlaces) { place in
+                    NavigationLink {
+                        PlaceDetail()
+                    } label: {
+                        PlaceRow(place: place)
+                    }
+                }
+            }
+            .navigationTitle("Places")
+        }
     }
 }
 
-#Preview {
-    PlaceList()
+struct PlaceList_Previews: PreviewProvider {
+    static var previews: some View {
+        PlaceList()
+            .environmentObject(ModelData())
+    }
 }
