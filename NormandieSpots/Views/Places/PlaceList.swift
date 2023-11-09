@@ -27,7 +27,7 @@ struct PlaceList: View {
                 
                 ForEach(filteredPlaces) { place in
                     NavigationLink {
-                        PlaceDetail()
+                        PlaceDetail(place: place)
                     } label: {
                         PlaceRow(place: place)
                     }
