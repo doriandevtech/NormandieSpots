@@ -33,7 +33,7 @@ struct PlaceList: View {
                     }
                 }
             }
-            .navigationTitle("Places")
+            .navigationTitle("Lieux")
         }
     }
 }
