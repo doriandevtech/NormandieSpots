@@ -14,7 +14,8 @@ struct Place: Hashable, Codable, Identifiable {
     /// Main properties
     var id: Int
     var name: String
-    var state: String
+    var category: String
+    var country: String
     var description: String
     var isFavorite: Bool
     
