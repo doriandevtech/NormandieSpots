@@ -16,6 +16,13 @@ struct PlaceRow: View {
                 .resizable()
                 .frame(width: 50, height: 50)
             Text(place.name)
+            
+            Spacer()
+            
+            if place.isFavorite {
+                Image(systemName: "star.fill")
+                    .foregroundColor(.yellow)
+            }
         }
     }
 }
