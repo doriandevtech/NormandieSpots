@@ -17,6 +17,9 @@
 		F435434A2AD9629D00793062 /* PlaceList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43543492AD9629D00793062 /* PlaceList.swift */; };
 		F43A21E12AFD488D00D98F07 /* PlaceRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43A21E02AFD488D00D98F07 /* PlaceRow.swift */; };
 		F43A21E32AFD493B00D98F07 /* PlaceDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43A21E22AFD493B00D98F07 /* PlaceDetail.swift */; };
+		F43A21E52AFD4FD200D98F07 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43A21E42AFD4FD200D98F07 /* CircleImage.swift */; };
+		F43A21E72AFD513100D98F07 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43A21E62AFD513100D98F07 /* MapView.swift */; };
+		F43A21E92AFD545900D98F07 /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43A21E82AFD545900D98F07 /* FavoriteButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		F43543492AD9629D00793062 /* PlaceList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceList.swift; sourceTree = "<group>"; };
 		F43A21E02AFD488D00D98F07 /* PlaceRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceRow.swift; sourceTree = "<group>"; };
 		F43A21E22AFD493B00D98F07 /* PlaceDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetail.swift; sourceTree = "<group>"; };
+		F43A21E42AFD4FD200D98F07 /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
+		F43A21E62AFD513100D98F07 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		F43A21E82AFD545900D98F07 /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +130,9 @@
 		F43543472AD9627900793062 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				F43A21E42AFD4FD200D98F07 /* CircleImage.swift */,
+				F43A21E62AFD513100D98F07 /* MapView.swift */,
+				F43A21E82AFD545900D98F07 /* FavoriteButton.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -207,11 +216,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				F41905E12AC88339000E3A0B /* Place.swift in Sources */,
+				F43A21E52AFD4FD200D98F07 /* CircleImage.swift in Sources */,
 				F435434A2AD9629D00793062 /* PlaceList.swift in Sources */,
+				F43A21E92AFD545900D98F07 /* FavoriteButton.swift in Sources */,
 				F43A21E12AFD488D00D98F07 /* PlaceRow.swift in Sources */,
 				F41905CF2AC86A7B000E3A0B /* ContentView.swift in Sources */,
 				F43A21E32AFD493B00D98F07 /* PlaceDetail.swift in Sources */,
 				F41905CD2AC86A7B000E3A0B /* NormandieSpotsApp.swift in Sources */,
+				F43A21E72AFD513100D98F07 /* MapView.swift in Sources */,
 				F41905E32AC88600000E3A0B /* ModelData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
