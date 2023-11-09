@@ -2,7 +2,7 @@
     {
         "name": "Étretat",
         "category": "Commune",
-        "state": "France",
+        "country": "France",
         "id": 1001,
         "isFeatured": true,
         "isFavorite": true,
@@ -16,7 +16,7 @@
     {
         "name": "Honfleur",
         "category": "Commune",
-        "state": "France",
+        "country": "France",
         "id": 1002,
         "isFeatured": true,
         "isFavorite": true,
@@ -30,7 +30,7 @@
     {
         "name": "Veules-les-Roses",
         "category": "Commune",
-        "state": "France",
+        "country": "France",
         "id": 1003,
         "isFeatured": true,
         "isFavorite": true,
@@ -44,7 +44,7 @@
     {
         "name": "Le Havre",
         "category": "Ville",
-        "state": "France",
+        "country": "France",
         "id": 1004,
         "isFeatured": true,
         "isFavorite": true,
@@ -58,7 +58,7 @@
     {
         "name": "Hermeville",
         "category": "Commune",
-        "state": "France",
+        "country": "France",
         "id": 1005,
         "isFeatured": true,
         "isFavorite": true,
