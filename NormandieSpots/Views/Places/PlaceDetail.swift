@@ -22,7 +22,7 @@ struct PlaceDetail: View {
                 .frame(height: 300)
             
             CircleImage(image: place.image)
-                .offset(y: -130)
+                .offset(y: -100)
                 .padding(.bottom, -130)
             
             VStack(alignment: .leading) {
