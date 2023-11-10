@@ -15,6 +15,7 @@ struct PlaceRow: View {
             place.image
                 .resizable()
                 .frame(width: 50, height: 50)
+                .clipShape(Circle())
             Text(place.name)
             
             Spacer()
