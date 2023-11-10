@@ -7,8 +7,8 @@
         "isFeatured": true,
         "isFavorite": true,
         "coordinates": {
-            "longitude": 49.707308,
-            "latitude": 0.193583
+            "latitude": 49.70703471461734,
+            "longitude": 0.2053075022712043
         },
         "description": "Étretat [etʁəta] est une commune française située dans le département de la Seine-Maritime en région Normandie. Jadis modeste village de pêcheurs, Étretat devient au XIXᵉ siècle une station balnéaire de renom. Jacques Offenbach ou Guy de Maupassant y organisent des fêtes pour leurs cercles d'amis.",
         "imageName": "etretat"
@@ -21,8 +21,8 @@
         "isFeatured": true,
         "isFavorite": true,
         "coordinates": {
-            "longitude": 49.418767,
-            "latitude": 0.232928
+            "latitude": 49.418767,
+            "longitude": 0.232928
         },
         "description": "Honfleur est une ville du département du Calvados, appartenant à la Normandie, région du nord de la France. Elle est située sur l'estuaire de la Seine débouchant sur la Manche. Le vieux bassin (vieux port), bordé de maisons authentiques allant du XVIe au XVIIIe siècle, a inspiré des artistes tels que Claude Monet ou Eugène Boudin, fils de la ville. Non loin de là se trouve l'église Sainte-Catherine datant du XVe siècle et dotée d'une structure en bois voûtée érigée par des ouvriers de chantiers navals.",
         "imageName": "honfleur"
@@ -35,8 +35,8 @@
         "isFeatured": true,
         "isFavorite": true,
         "coordinates": {
-            "longitude": 49.870494,
-            "latitude": 0.801649
+            "latitude": 49.870494,
+            "longitude": 0.801649
         },
         "description": "Veules-les-Roses est une station balnéaire et une commune française, située en bord de mer, dans le département de la Seine-Maritime, en région Normandie. Elle compte parmi « Les Plus Beaux Villages de France ». Ses habitants sont les Veulais.",
         "imageName": "veulesLesRoses"
@@ -49,8 +49,8 @@
         "isFeatured": true,
         "isFavorite": true,
         "coordinates": {
-            "longitude": 49.494884,
-            "latitude": 0.108876
+            "latitude": 49.494884,
+            "longitude": 0.108876
         },
         "description": "Le Havre est une commune du nord-ouest de la France située dans le département de la Seine-Maritime en région Normandie. Elle se trouve sur la rive droite de l'estuaire de la Seine, au bord de la Manche.",
         "imageName": "leHavre"
@@ -63,8 +63,8 @@
         "isFeatured": true,
         "isFavorite": true,
         "coordinates": {
-            "longitude": 49.597104,
-            "latitude": 0.264312
+            "latitude": 49.597104,
+            "longitude": 0.264312
         },
         "description": "Hermeville est une commune française située dans le département de la Seine-Maritime en région Normandie.",
         "imageName": "hermeville"
