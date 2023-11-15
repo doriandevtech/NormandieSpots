@@ -15,6 +15,9 @@
 ## Current state :
 - The v1.0.0-alpha is developped and shown below 👇.
 
+## Next version :
+- v1.0.0-beta will be the next version for the app and will be released in the coming weeks.
+
 ## Next steps :
 - Use persisting datas
 - Add UI and Unit tests
