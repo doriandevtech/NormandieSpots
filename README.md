@@ -1,6 +1,6 @@
 #  NormandieSpots
 
-## List of places (beaches 🏖️, cities 🏘️, countryside 🐄...)
+## List of places (beaches 🏖️, cities 🏘️, countryside 🐄...) to see in french region Normandie
 
 ### Project type:
 - Open Source project => Feel free to contribute and react to it !
@@ -13,7 +13,7 @@
 - MapKit
 
 ## Current state :
-- The v1.0.0 is developped and shown below 👇.
+- The v1.0.0-alpha is developped and shown below 👇.
 
 ## Next steps :
 - Use persisting datas
