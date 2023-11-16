@@ -21,6 +21,7 @@ struct PlaceDetail: View {
                 .ignoresSafeArea(edges: .top)
                 .frame(height: 300)
             
+            // Configure spot's image
             CircleImage(image: place.image)
                 .offset(y: -100)
                 .padding(.bottom, -130)
