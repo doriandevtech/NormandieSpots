@@ -17,7 +17,7 @@ final class ModelData: ObservableObject {
 
 
 /// Fetches JSON data with a given name from the app's main bundle
-/// - Parameter filename: placesDatas.JSON -> datas for places diosplayed in the app
+/// - Parameter filename: placesDatas.JSON -> datas for places displayed in the app
 /// - Returns: datas decoded from the file passed in parameter
 func load<T: Decodable>(_ filename: String) -> T {
     let data: Data
