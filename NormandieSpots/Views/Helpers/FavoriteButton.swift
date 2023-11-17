@@ -11,6 +11,7 @@ struct FavoriteButton: View {
     @Binding var isSet: Bool
     
     var body: some View {
+///        The button is toggled when clicked and its value goes from a yellow ⭐️ (filled star) to an empty grey ⭐️ (star)
         Button {
             isSet.toggle()
         } label: {
