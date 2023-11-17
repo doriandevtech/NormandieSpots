@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// Configures an item's image as a circle image
 struct CircleImage: View {
     var image: Image
     
