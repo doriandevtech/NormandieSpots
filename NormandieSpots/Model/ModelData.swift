@@ -8,6 +8,7 @@
 import Foundation
 import Combine
 
+/// Defines the Data Model of the app
 final class ModelData: ObservableObject {
     
     /// Array of landmarks initialized from landmarkData.json
