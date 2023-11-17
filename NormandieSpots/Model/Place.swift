@@ -11,7 +11,7 @@ import CoreLocation
 
 /// Defines properties and structures for a given 'Place'
 struct Place: Hashable, Codable, Identifiable {
-    /// Main properties
+    /// Places main properties
     var id: Int
     var name: String
     var category: String
