@@ -8,6 +8,7 @@
 import SwiftUI
 import MapKit
 
+/// Configures the map displayed for the PlaceDetail view
 struct MapView: View {
     var coordinate: CLLocationCoordinate2D
     
