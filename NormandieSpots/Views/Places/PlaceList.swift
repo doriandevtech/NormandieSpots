@@ -29,10 +29,12 @@ struct PlaceList: View {
     var body: some View {
         NavigationView {
             List {
+///                Adds a isFavorite toggle item
                 Toggle(isOn: $showFavOnly, label: {
                     Text("Favoris")
                 })
                 
+///                Each place has a link from PlaceRow redirecting to its PlaceDetail view
                 ForEach(filteredPlaces) { place in
                     NavigationLink {
                         PlaceDetail(place: place)
