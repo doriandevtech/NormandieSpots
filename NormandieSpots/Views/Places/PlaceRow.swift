@@ -7,6 +7,10 @@
 
 import SwiftUI
 
+/// Main aspect :  PlaceRow defines a lonely item
+/// sub aspects :
+/// - Its name, picture are shown by default
+/// - A ⭐️ (star) can be shown if the place is in the "favorite" list
 struct PlaceRow: View {
     var place: Place
     
