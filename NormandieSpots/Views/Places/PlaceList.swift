@@ -7,11 +7,19 @@
 
 import SwiftUI
 
+/// Main aspect :  PlaceList configures a list of places
+/// sub aspects : PlaceList can filter places using there "isFavorite" attribute
 struct PlaceList: View {
+    
+    /// Add modelData Data Model in PlaceList
     @EnvironmentObject var modelData: ModelData
     
+    
+    /// Create a private variable for the "Show favorite" toggle
     @State private var showFavOnly = false
     
+    
+    /// filteredPlaces shows only favorite places when "Show favorite" toggle is on
     var filteredPlaces: [Place] {
         modelData.places.filter { place in
             (!showFavOnly || place.isFavorite)
