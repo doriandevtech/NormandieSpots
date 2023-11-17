@@ -11,15 +11,19 @@ import MapKit
 struct MapView: View {
     var coordinate: CLLocationCoordinate2D
     
+    /// Sets the variable recgion as rectangular geographic region that centers around a specific latitude and longitude
     @State private var region = MKCoordinateRegion()
     
     var body: some View {
+///        Displays a map for a given region
         Map(coordinateRegion: $region)
             .onAppear {
                 setRegion(coordinate)
             }
     }
     
+    /// Sets the variable region according to the latitude and longitude values linked to the selected place
+    /// - Parameter coordinate: The latitude and longitude associated with the selected place
     private func setRegion(_ coordinate: CLLocationCoordinate2D) {
         region = MKCoordinateRegion(
             center: coordinate,
