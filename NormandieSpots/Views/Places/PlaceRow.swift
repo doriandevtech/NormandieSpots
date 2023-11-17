@@ -19,11 +19,12 @@ struct PlaceRow: View {
             place.image
                 .resizable()
                 .frame(width: 50, height: 50)
-                .clipShape(Circle())
+                .clipShape(Circle()) /// Renders the image as a circle
             Text(place.name)
             
             Spacer()
             
+///         Shows a yellow ⭐️ (star) if the place is registered as a favorite one
             if place.isFavorite {
                 Image(systemName: "star.fill")
                     .foregroundColor(.yellow)
