@@ -5,7 +5,7 @@
         "country": "France",
         "id": 1001,
         "isFeatured": true,
-        "isFavorite": true,
+        "isFavorite": false,
         "coordinates": {
             "latitude": 49.70703471461734,
             "longitude": 0.2053075022712043
@@ -33,7 +33,7 @@
         "country": "France",
         "id": 1003,
         "isFeatured": true,
-        "isFavorite": true,
+        "isFavorite": false,
         "coordinates": {
             "latitude": 49.870494,
             "longitude": 0.801649
