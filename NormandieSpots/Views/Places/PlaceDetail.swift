@@ -10,9 +10,8 @@ import SwiftUI
 /// Main aspect :  PlaceDetail shows the details of a selected place (Location, Image, Description, Country...)
 /// sub aspects : A place can also be made "favorite" or taken out from this list in this view
 struct PlaceDetail: View {
-    
-    
-    /// Add modelData Data Model in PlaceDetail
+
+    /// Declares modelData an instance of the data model ModelData in PlaceDetail
     @EnvironmentObject var modelData: ModelData
     var place: Place
     

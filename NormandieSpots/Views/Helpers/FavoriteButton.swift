@@ -9,7 +9,7 @@ import SwiftUI
 
 /// The button is toggled when clicked and its value goes from a yellow ⭐️ (filled star) to an empty grey ⭐️ (star)
 struct FavoriteButton: View {
-    /// The isSet binding indicates the favorite button's current state, and provide a constant value for the preview
+    /// isSet binding indicates the favorite button's current state, and provide a constant value for the preview
     @Binding var isSet: Bool
     
     var body: some View {
