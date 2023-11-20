@@ -19,9 +19,10 @@
 - v1.0.0-beta will be the next version for the app and will be released in the coming weeks.
 
 ## Next steps :
-- Use persisting datas
-- Add UI and Unit tests
-- Add more spots and complementary informations
+- Create an App icon 🖼️ 
+- Use persisting datas 📊
+- Add UI and Unit tests ✅
+- Add more spots and complementary informations 🆕
 
 ## Here are some screenshots of my app ⤵️
 
