@@ -12,19 +12,17 @@
 - SwiftUI
 - MapKit
 
-## Current state :
-- The v1.0.0-alpha is developped and shown below 👇.
+## Current state:
+- The v1.0.0-alpha is developped and shown below 👇
 
-## Next version :
-- v1.0.0-beta will be the next version for the app and will be released in the coming weeks.
+## Here are some screenshots of my app ⤵️:
 
-## Next steps :
-- Create an App icon 🖼️ 
-- Use persisting datas 📊
-- Add UI and Unit tests ✅
-- Add more spots and complementary informations 🆕
+### App icon:
+#### View on home screen:
+<img width="240" alt="Capture d’écran 2023-11-21 à 12 52 28 AM" src="https://github.com/doriandevtech/NormandieSpots/assets/61510923/86b50362-bd15-4ebf-9504-70d0983b44ae">
 
-## Here are some screenshots of my app ⤵️
+#### Detailed App icon:
+<img width="160" alt="Capture d’écran 2023-11-21 à 12 53 57 AM" src="https://github.com/doriandevtech/NormandieSpots/assets/61510923/84cd0f53-1969-4d97-85e3-b3143fbdc701">
 
 ### Home page view:
 
@@ -40,3 +38,13 @@
 <img width="190" alt="Capture d’écran 2023-11-10 à 4 54 04 PM" src="https://github.com/doriandevtech/NormandieSpots/assets/61510923/a2e651b7-57be-4c23-ab55-2bacafcc447c">
 <img width="190" alt="Capture d’écran 2023-11-10 à 5 01 03 PM" src="https://github.com/doriandevtech/NormandieSpots/assets/61510923/e7a987c0-9ab0-4fca-b556-d0d7dc82ec7f">
 <img width="190" alt="Capture d’écran 2023-11-10 à 4 53 12 PM" src="https://github.com/doriandevtech/NormandieSpots/assets/61510923/b117df1f-82ca-49f4-bf5c-07ae5f1f5a1e">
+
+
+## Next version:
+- v1.0.0-beta will be the next version for the app and will be released in the coming weeks.
+
+## Next steps:
+- Create an App icon 🖼️ -> Done ✅ (App icon's v1 is out 👆🏻)
+- Use persisting datas 📊
+- Add UI and Unit tests ✅
+- Add more spots and complementary informations 🆕
