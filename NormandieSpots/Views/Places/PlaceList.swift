@@ -41,10 +41,22 @@ struct PlaceList: View {
                         PlaceRow(place: place)
                     }
                 }
+                .onDelete(perform: delete)
+//                .onMove(perform: move)
             }
             .navigationTitle("Lieux")
+            .toolbar {
+                EditButton()
+            }
         }
     }
+    
+    func delete(at offsets: IndexSet) {
+        print("delete")
+    }
+//    func move(at offsets: IndexSet) {
+//        print("move")
+//    }
 }
 
 struct PlaceList_Previews: PreviewProvider {
