@@ -25,6 +25,8 @@ struct PlaceList: View {
         }
     }
     
+    @State private var placesRow = ["place 1", "place 2", "place 3", "place 4", "place 5"]
+    
     var body: some View {
         NavigationView {
             List {
@@ -34,13 +36,14 @@ struct PlaceList: View {
                 })
                 
 ///                Each place has a link from PlaceRow redirecting to its PlaceDetail view
-                ForEach(filteredPlaces) { place in
+                ForEach(filteredPlaces, id: \.self) { place in
                     NavigationLink {
                         PlaceDetail(place: place)
                     } label: {
                         PlaceRow(place: place)
                     }
                 }
+                .onDelete(perform: delete)
                 
 ///                Swipe action for each row - "Delete" and "Add to favorite list":
                 .swipeActions(edge: /*@START_MENU_TOKEN@*/.trailing/*@END_MENU_TOKEN@*/) {
@@ -61,6 +64,11 @@ struct PlaceList: View {
             }
             .navigationTitle("Lieux")
         }
+        
+    }
+    func delete(at offsets: IndexSet) {
+        placesRow.remove(atOffsets: offsets)
+        print(offsets)
     }
 
 }
