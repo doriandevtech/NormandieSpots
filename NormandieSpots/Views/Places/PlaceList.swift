@@ -41,22 +41,26 @@ struct PlaceList: View {
                         PlaceRow(place: place)
                     }
                 }
-                .onDelete(perform: delete)
-//                .onMove(perform: move)
+                .swipeActions(edge: /*@START_MENU_TOKEN@*/.trailing/*@END_MENU_TOKEN@*/) {
+                    Button(role: .destructive) {
+                        print("Delete pressed")
+                    } label: {
+                        Label("Delete", systemImage: "trash.fill")
+                    }
+                }
+                .swipeActions(edge: .leading) {
+                    Button {
+                        print("Favorite pressed")
+                    } label: {
+                        Label("Favorite", systemImage: "star.fill")
+                    }
+                    .tint(.yellow)
+                }
             }
             .navigationTitle("Lieux")
-            .toolbar {
-                EditButton()
-            }
         }
     }
-    
-    func delete(at offsets: IndexSet) {
-        print("delete")
-    }
-//    func move(at offsets: IndexSet) {
-//        print("move")
-//    }
+
 }
 
 struct PlaceList_Previews: PreviewProvider {
