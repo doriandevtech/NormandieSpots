@@ -41,6 +41,8 @@ struct PlaceList: View {
                         PlaceRow(place: place)
                     }
                 }
+                
+///                Swipe action for each row - "Delete" and "Add to favorite list":
                 .swipeActions(edge: /*@START_MENU_TOKEN@*/.trailing/*@END_MENU_TOKEN@*/) {
                     Button(role: .destructive) {
                         print("Delete pressed")
