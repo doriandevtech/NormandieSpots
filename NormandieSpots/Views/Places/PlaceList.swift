@@ -14,9 +14,12 @@ struct PlaceList: View {
     @EnvironmentObject var modelData: ModelData
     
 
-    /// Create a private variable for the "Show favorite" toggle
+    /// Private variable for the "Show favorite" toggle
     @State private var showFavOnly = false
     
+    
+    /// Private variable for the "Delete alert popup"
+    @State private var showDeleteAlert = false
     
     /// filteredPlaces shows only favorite places when "Show favorite" toggle is on
     var filteredPlaces: [Place] {
@@ -43,15 +46,15 @@ struct PlaceList: View {
                         PlaceRow(place: place)
                     }
                 }
-                .onDelete(perform: delete)
                 
 ///                Swipe action for each row - "Delete" and "Add to favorite list":
                 .swipeActions(edge: /*@START_MENU_TOKEN@*/.trailing/*@END_MENU_TOKEN@*/) {
-                    Button(role: .destructive) {
-                        print("Delete pressed")
+                    Button {
+                        withAnimation { showDeleteAlert.toggle() }
                     } label: {
                         Label("Delete", systemImage: "trash.fill")
                     }
+                    .tint(.red)
                 }
                 .swipeActions(edge: .leading) {
                     Button {
@@ -63,14 +66,20 @@ struct PlaceList: View {
                 }
             }
             .navigationTitle("Lieux")
+            .alert(isPresented: $showDeleteAlert) {
+                Alert(
+                    title: Text("Suppression d'un lieu"),
+                    message: Text("Confirmez-vous la suppression de ce lieu ?"),
+                    primaryButton: .destructive(Text("Delete")) {
+                        print("item deleted")
+                    },
+                    secondaryButton: .cancel()
+                )
+            }
+            
         }
         
     }
-    func delete(at offsets: IndexSet) {
-        placesRow.remove(atOffsets: offsets)
-        print(offsets)
-    }
-
 }
 
 struct PlaceList_Previews: PreviewProvider {
