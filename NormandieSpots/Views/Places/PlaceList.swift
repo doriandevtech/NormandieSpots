@@ -27,9 +27,7 @@ struct PlaceList: View {
             (!showFavOnly || place.isFavorite)
         }
     }
-    
-    @State private var placesRow = ["place 1", "place 2", "place 3", "place 4", "place 5"]
-    
+        
     var body: some View {
         NavigationView {
             List {
@@ -39,7 +37,7 @@ struct PlaceList: View {
                 })
                 
 ///                Each place has a link from PlaceRow redirecting to its PlaceDetail view
-                ForEach(filteredPlaces, id: \.self) { place in
+                ForEach(filteredPlaces) { place in
                     NavigationLink {
                         PlaceDetail(place: place)
                     } label: {
@@ -48,7 +46,7 @@ struct PlaceList: View {
                 }
                 
 ///                Swipe action for each row - "Delete" and "Add to favorite list":
-                .swipeActions(edge: /*@START_MENU_TOKEN@*/.trailing/*@END_MENU_TOKEN@*/) {
+                .swipeActions(edge: .trailing) {
                     Button {
                         withAnimation { showDeleteAlert.toggle() }
                     } label: {
@@ -58,7 +56,9 @@ struct PlaceList: View {
                 }
                 .swipeActions(edge: .leading) {
                     Button {
-                        print("Favorite pressed")
+                        if ((filteredPlaces.firstIndex(where: { $0.id == 1002})) != nil) {
+                            print("hello")
+                        }
                     } label: {
                         Label("Favorite", systemImage: "star.fill")
                     }
@@ -70,15 +70,14 @@ struct PlaceList: View {
                 Alert(
                     title: Text("Suppression d'un lieu"),
                     message: Text("Confirmez-vous la suppression de ce lieu ?"),
-                    primaryButton: .destructive(Text("Delete")) {
+//                    message: Text("Confirmez-vous la suppression de ce lieu ?"),
+                    primaryButton: .destructive(Text("Supprimer")) {
                         print("item deleted")
                     },
-                    secondaryButton: .cancel()
+                    secondaryButton: .cancel(Text("Annuler"))
                 )
             }
-            
         }
-        
     }
 }
 
