@@ -8,11 +8,26 @@
 import SwiftUI
 
 struct CategoryHome: View {
+    @EnvironmentObject var modelData: ModelData
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationSplitView {
+            List {
+                ForEach(modelData.categories.keys.sorted(), id: \.self) { category in
+                    CategoryRow(categoryName: category, placesList: modelData.categories[category]!)
+                }
+            }
+            .listStyle(.inset)
+            .navigationTitle("Lieux")
+        } detail: {
+            Text("Choisissez un lieu")
+        }
     }
 }
 
-#Preview {
-    CategoryHome()
+struct CategoryHome_Previews: PreviewProvider {
+    static var previews: some View {
+        CategoryHome()
+            .environmentObject(ModelData())
+    }
 }
