@@ -20,6 +20,9 @@
 		F43A21E52AFD4FD200D98F07 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43A21E42AFD4FD200D98F07 /* CircleImage.swift */; };
 		F43A21E72AFD513100D98F07 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43A21E62AFD513100D98F07 /* MapView.swift */; };
 		F43A21E92AFD545900D98F07 /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43A21E82AFD545900D98F07 /* FavoriteButton.swift */; };
+		F4821A372B23835900C8836B /* CategoryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4821A362B23835900C8836B /* CategoryItem.swift */; };
+		F4821A392B23836D00C8836B /* CategoryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4821A382B23836D00C8836B /* CategoryRow.swift */; };
+		F4821A3B2B2383BC00C8836B /* CategoryHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4821A3A2B2383BC00C8836B /* CategoryHome.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +41,9 @@
 		F43A21E42AFD4FD200D98F07 /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 		F43A21E62AFD513100D98F07 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		F43A21E82AFD545900D98F07 /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
+		F4821A362B23835900C8836B /* CategoryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryItem.swift; sourceTree = "<group>"; };
+		F4821A382B23836D00C8836B /* CategoryRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryRow.swift; sourceTree = "<group>"; };
+		F4821A3A2B2383BC00C8836B /* CategoryHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryHome.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +100,9 @@
 			children = (
 				F41905CE2AC86A7B000E3A0B /* ContentView.swift */,
 				F43543482AD9628200793062 /* Badges */,
-				F43543472AD9627900793062 /* Helpers */,
+				F4821A352B23832A00C8836B /* Category */,
 				F43543462AD9626C00793062 /* Places */,
+				F43543472AD9627900793062 /* Helpers */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -142,6 +149,16 @@
 			children = (
 			);
 			path = Badges;
+			sourceTree = "<group>";
+		};
+		F4821A352B23832A00C8836B /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				F4821A3A2B2383BC00C8836B /* CategoryHome.swift */,
+				F4821A382B23836D00C8836B /* CategoryRow.swift */,
+				F4821A362B23835900C8836B /* CategoryItem.swift */,
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,6 +232,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4821A3B2B2383BC00C8836B /* CategoryHome.swift in Sources */,
 				F41905E12AC88339000E3A0B /* Place.swift in Sources */,
 				F43A21E52AFD4FD200D98F07 /* CircleImage.swift in Sources */,
 				F435434A2AD9629D00793062 /* PlaceList.swift in Sources */,
@@ -224,6 +242,8 @@
 				F43A21E32AFD493B00D98F07 /* PlaceDetail.swift in Sources */,
 				F41905CD2AC86A7B000E3A0B /* NormandieSpotsApp.swift in Sources */,
 				F43A21E72AFD513100D98F07 /* MapView.swift in Sources */,
+				F4821A372B23835900C8836B /* CategoryItem.swift in Sources */,
+				F4821A392B23836D00C8836B /* CategoryRow.swift in Sources */,
 				F41905E32AC88600000E3A0B /* ModelData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
