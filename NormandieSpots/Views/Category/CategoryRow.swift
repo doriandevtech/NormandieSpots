@@ -8,11 +8,38 @@
 import SwiftUI
 
 struct CategoryRow: View {
+    var categoryName: String
+    var placesList: [Place]
+    var places = ModelData().places
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Text(categoryName)
+                .font(.headline)
+                .padding(.bottom, 15)
+            
+            ScrollView(.horizontal, showsIndicators: false) {
+                HStack {
+                    ForEach(places) { place in
+                        NavigationLink {
+                            PlaceDetail(place: place)
+                        } label: {
+                            CategoryItem(place: place)
+                        }
+                    }
+                }
+            }
+            .frame(height: 185)
+        }
     }
 }
 
-#Preview {
-    CategoryRow()
+struct CategoryRow_Preview: PreviewProvider {
+    static var places = ModelData().places
+    
+    static var previews: some View {
+        CategoryRow(
+            categoryName: places[0].category,
+            placesList: Array(ModelData().places.prefix(3)))
+    }
 }
