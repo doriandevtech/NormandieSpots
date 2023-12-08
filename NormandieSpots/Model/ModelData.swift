@@ -13,6 +13,17 @@ final class ModelData: ObservableObject {
     
     /// Array of landmarks initialized from landmarkData.json
     @Published var places: [Place] = load("placesDatas.json")
+    
+    var features: [Place] {
+        places.filter { $0.isFeatured }
+    }
+    
+    var categories: [String: [Place]] {
+        Dictionary(
+            grouping: places,
+            by: { $0.category.rawValue }
+        )
+    }
 }
 
 

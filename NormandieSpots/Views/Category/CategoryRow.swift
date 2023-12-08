@@ -39,7 +39,7 @@ struct CategoryRow_Preview: PreviewProvider {
     
     static var previews: some View {
         CategoryRow(
-            categoryName: places[0].category,
+            categoryName: places[0].category.rawValue,
             placesList: Array(ModelData().places.prefix(3)))
     }
 }

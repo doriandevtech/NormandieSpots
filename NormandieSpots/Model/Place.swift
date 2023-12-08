@@ -14,10 +14,17 @@ struct Place: Hashable, Codable, Identifiable {
     /// Places main properties
     var id: Int
     var name: String
-    var category: String
     var country: String
     var description: String
     var isFavorite: Bool
+    var isFeatured: Bool
+    var category: Category
+    
+    /// Place's category enum
+    enum Category: String, CaseIterable, Codable {
+        case ville = "Ville"
+        case commune = "Commune"
+    }
     
     /// Image declaration
     private var imageName: String
