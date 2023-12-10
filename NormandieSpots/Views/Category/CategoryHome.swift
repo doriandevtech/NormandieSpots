@@ -14,12 +14,14 @@ struct CategoryHome: View {
         NavigationSplitView {
             List {
                 /// Adds a featured image on top of the categories rows
-                modelData.features[0].image
-                    .resizable()
-                    .scaledToFill()
-                    .frame(height: 200)
-                    .clipped()
-                    .listRowInsets(EdgeInsets())
+                NavigationLink(destination: PlaceDetail(place: modelData.features[0])) {
+                    modelData.features[0].image
+                        .resizable()
+                        .scaledToFill()
+                        .frame(height: 200)
+                        .clipped()
+                        .listRowInsets(EdgeInsets())
+                }
                 
                 /// Displays places according to each category
                 ForEach(modelData.categories.keys.sorted(), id: \.self) { category in
@@ -28,7 +30,7 @@ struct CategoryHome: View {
                 .listRowInsets(EdgeInsets())
             }
             .listStyle(.inset)
-            .navigationTitle("Lieux")
+            .navigationTitle("Home")
         } detail: {
             Text("Choisissez un lieu")
         }
