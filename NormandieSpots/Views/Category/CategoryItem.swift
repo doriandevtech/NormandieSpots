@@ -11,8 +11,9 @@ struct CategoryItem: View {
     var place: Place
     
     var body: some View {
-        VStack {
+        VStack(alignment: .leading) {
             place.image
+                .renderingMode(.original)
                 .resizable()
                 .frame(width: 150, height: 150)
                 .clipShape(RoundedRectangle(cornerRadius: 10))
@@ -21,6 +22,7 @@ struct CategoryItem: View {
                 .foregroundStyle(.primary)
                 .font(.title3)
         }
+        .padding(.leading, 15)
     }
 }
 
