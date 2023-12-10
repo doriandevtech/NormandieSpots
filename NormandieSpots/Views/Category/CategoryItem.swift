@@ -18,9 +18,15 @@ struct CategoryItem: View {
                 .frame(width: 150, height: 150)
                 .clipShape(RoundedRectangle(cornerRadius: 10))
                 .shadow(radius: 2)
-            Text(place.name)
-                .foregroundStyle(.primary)
-                .font(.title3)
+            HStack {
+                Text(place.name)
+                    .foregroundStyle(.primary)
+                .font(.caption)
+                if place.isFavorite {
+                    Image(systemName: "star.fill")
+                        .foregroundColor(.yellow)
+                }
+            }
         }
         .padding(.leading, 15)
     }
