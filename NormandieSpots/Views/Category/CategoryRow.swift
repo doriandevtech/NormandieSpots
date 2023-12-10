@@ -16,11 +16,11 @@ struct CategoryRow: View {
         VStack {
             Text(categoryName)
                 .font(.headline)
-                .padding(.bottom, 15)
+                .padding(.leading, 15)
+                .padding(.top, 5)
             
             ScrollView(.horizontal, showsIndicators: false) {
-                HStack {
-                    ForEach(places) { place in
+                HStack(alignment: .top, spacing: 0) {                    ForEach(placesList) { place in
                         NavigationLink {
                             PlaceDetail(place: place)
                         } label: {
