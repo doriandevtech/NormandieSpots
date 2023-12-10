@@ -68,13 +68,11 @@ struct PlaceList: View {
             .navigationTitle("Lieux")
             .alert(isPresented: $showDeleteAlert) {
                 Alert(
-                    title: Text("Suppression d'un lieu"),
-                    message: Text("Confirmez-vous la suppression de ce lieu ?"),
-//                    message: Text("Confirmez-vous la suppression de ce lieu ?"),
-                    primaryButton: .destructive(Text("Supprimer")) {
+                    title: Text("Confirmez-vous la suppression de ce lieu ?"),
+                    primaryButton: .cancel(Text("Annuler")),
+                    secondaryButton: .destructive(Text("Supprimer")) {
                         print("item deleted")
-                    },
-                    secondaryButton: .cancel(Text("Annuler"))
+                    }
                 )
             }
         }
