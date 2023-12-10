@@ -43,7 +43,7 @@ struct PlaceDetail: View {
                 
 ///                This HStack shows the place's category and country
                 HStack {
-                    Text(place.category)
+                    Text(place.category.rawValue)
                     Spacer()
                     Text(place.country)
                 }
