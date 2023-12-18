@@ -41,10 +41,11 @@
 
 
 ## Next version:
-- v1.0.0-beta will be the next version for the app and will be released in the coming weeks.
+- v1.0.0-beta will be released in the coming weeks with multiple upgrades, such as a Home view !
 
 ## Next steps:
 - Create an App icon 🖼️ -> Done ✅ (App icon's v1 is out 👆🏻)
+- Add a 'Home' view 🏠
 - Use persisting datas 📊
 - Add UI and Unit tests ✅
 - Add more spots and complementary informations 🆕
