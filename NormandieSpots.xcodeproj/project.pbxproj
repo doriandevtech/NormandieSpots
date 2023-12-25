@@ -99,7 +99,6 @@
 			isa = PBXGroup;
 			children = (
 				F41905CE2AC86A7B000E3A0B /* ContentView.swift */,
-				F43543482AD9628200793062 /* Badges */,
 				F4821A352B23832A00C8836B /* Category */,
 				F43543462AD9626C00793062 /* Places */,
 				F43543472AD9627900793062 /* Helpers */,
@@ -142,13 +141,6 @@
 				F43A21E82AFD545900D98F07 /* FavoriteButton.swift */,
 			);
 			path = Helpers;
-			sourceTree = "<group>";
-		};
-		F43543482AD9628200793062 /* Badges */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Badges;
 			sourceTree = "<group>";
 		};
 		F4821A352B23832A00C8836B /* Category */ = {
