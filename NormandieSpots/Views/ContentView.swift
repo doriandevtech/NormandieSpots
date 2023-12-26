@@ -20,22 +20,24 @@ struct ContentView: View {
     /// Defines the content of "body" with a TabView and an item per tab
     var body: some View {
         TabView(selection: $selection) {
+            /// CategoryHome view - "home" tabItem
             CategoryHome()
-                .tabItem {
+                .tabItem { /// CategoryHome - tabItem's content
                     Label("Accueil", systemImage: "house.fill")
                 }
-                .tag(Tab.home)
-            
+                .tag(Tab.home) /// CategoryHome - tab "home" link
+                
+            /// PlaceList view - "list" tabItem
             PlaceList()
-                .tabItem {
+                .tabItem { /// PlaceList - tabItem's content
                     Label("Lieux", systemImage: "list.bullet")
                 }
-                .tag(Tab.list)
+                .tag(Tab.list) /// PlaceList - tab "list" link
         }
     }
 }
 
-/// Previews the ContentView
+/// Previews the ContentView view
 struct ContentView_Preview: PreviewProvider {
     static var previews: some View {
         ContentView()
