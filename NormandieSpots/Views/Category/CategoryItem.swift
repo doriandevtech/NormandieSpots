@@ -5,11 +5,16 @@
 //  Created by Dorian Emenir on 08/12/2023.
 //
 
+/// Imports SwiftUI framework
 import SwiftUI
 
+/// Main aspect: CategoryItem contains a VStack of a given place's image and a HStack with its name and isFavorite value
 struct CategoryItem: View {
+    
+    /// "place" variable declaration
     var place: Place
     
+    /// "body" contains a VStack of the place's image and a HStack with its name and isFavorite value
     var body: some View {
         VStack(alignment: .leading) {
             place.image
