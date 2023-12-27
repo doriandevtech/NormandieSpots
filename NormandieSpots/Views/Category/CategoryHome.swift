@@ -5,11 +5,15 @@
 //  Created by Dorian Emenir on 08/12/2023.
 //
 
+/// Imports SeiftUI framework
 import SwiftUI
 
+/// Main aspect: displays a NavigationSplitView of a featured place's image and a row for each category
 struct CategoryHome: View {
+    /// Declares modelData as an EnvironmentObject
     @EnvironmentObject var modelData: ModelData
     
+    /// The "body" contains a NavigationSplitView of a featured place's image and a row for each category
     var body: some View {
         NavigationSplitView {
             List {
@@ -27,14 +31,15 @@ struct CategoryHome: View {
                 }
                 .listRowInsets(EdgeInsets())
             }
-            .listStyle(.inset)
-            .navigationTitle("Accueil")
+            .listStyle(.inset) /// Adds list style
+            .navigationTitle("Accueil") /// Adds title to the List
         } detail: {
             Text("Choisissez un lieu")
         }
     }
 }
 
+/// Shows a preview of CategoryHome
 struct CategoryHome_Previews: PreviewProvider {
     static var previews: some View {
         CategoryHome()
