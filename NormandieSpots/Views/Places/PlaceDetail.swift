@@ -11,16 +11,17 @@ import SwiftUI
 /// sub aspects : A place can also be made "favorite" or taken out from this list in this view
 struct PlaceDetail: View {
 
-    /// Declares modelData an instance of the data model ModelData in PlaceDetail
+    /// Declares modelData as an instance of the data model ModelData in PlaceDetail
     @EnvironmentObject var modelData: ModelData
     var place: Place
     
     
-    /// Compares the input place's id with the one in the model data
+    /// "placeIndex" compares the input place's id with the one in the model data
     var placeIndex: Int {
         modelData.places.firstIndex(where: { $0.id == place.id })!
     }
     
+    /// body's content
     var body: some View {
         ScrollView {
 ///            Configure the map view of the selected place
@@ -65,6 +66,7 @@ struct PlaceDetail: View {
     }
 }
 
+/// Previews the PlaceDetail view
 struct PlaceDetail_Previews: PreviewProvider {
     static let modelData = ModelData()
     
