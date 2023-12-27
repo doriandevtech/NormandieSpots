@@ -5,38 +5,49 @@
 //  Created by Dorian Emenir on 08/12/2023.
 //
 
+/// Imports SwiftUI framework
 import SwiftUI
 
+/// Main aspect :  CategoryRow shows the list of a places for s given category
 struct CategoryRow: View {
+    
+    /// Variables declaration
     var categoryName: String
     var placesList: [Place]
     var places = ModelData().places
     
+    /// body's content
     var body: some View {
+        /// This VStack groups the category's name and a ScrollView of the linked places
         VStack {
+            /// Category's name
             Text(categoryName)
                 .font(.headline)
                 .padding(.leading, 15)
                 .padding(.top, 5)
             
+            /// ScrollView of the places inside this category
             ScrollView(.horizontal, showsIndicators: false) {
+                /// This HStack contains a NavigationLink to a given place detailed informations
                 HStack(alignment: .top, spacing: 0) {                    ForEach(placesList) { place in
-                        NavigationLink {
-                            PlaceDetail(place: place)
+                        NavigationLink { /// NavigationLink directing to a places informations
+                            PlaceDetail(place: place) /// Opens PlaceDetail view for the given place
                         } label: {
-                            CategoryItem(place: place)
+                            CategoryItem(place: place) /// Shows the CategoryItem view for the given place
                         }
                     }
                 }
             }
-            .frame(height: 185)
+            .frame(height: 185) /// Sets the ScrollView's height
         }
     }
 }
 
+/// Shows a preview of CategoryRow with default parameters
 struct CategoryRow_Preview: PreviewProvider {
     static var places = ModelData().places
     
+    /// Defines "previews" variable with a CategoryRow and default parameters
     static var previews: some View {
         CategoryRow(
             categoryName: places[0].category.rawValue,
