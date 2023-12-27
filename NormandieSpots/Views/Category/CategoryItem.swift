@@ -17,12 +17,15 @@ struct CategoryItem: View {
     /// "body" contains a VStack of the place's image and a HStack with its name and isFavorite value
     var body: some View {
         VStack(alignment: .leading) {
+            /// places image
             place.image
                 .renderingMode(.original)
                 .resizable()
                 .frame(width: 150, height: 150)
                 .clipShape(RoundedRectangle(cornerRadius: 10))
                 .shadow(radius: 2)
+                
+            /// This HStsck contains the place's name and its isFavorite value
             HStack {
                 Text(place.name)
                     .foregroundStyle(.primary)
@@ -33,10 +36,11 @@ struct CategoryItem: View {
                 }
             }
         }
-        .padding(.leading, 15)
+        .padding(.leading, 15) /// Adds padding to the left of the VStack
     }
 }
 
+/// Shows a preview of the CategoryItem view with given datas
 #Preview {
     CategoryItem(place: ModelData().places[0])
 }
