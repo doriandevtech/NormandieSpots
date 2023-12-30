@@ -5,8 +5,8 @@
 //  Created by Dorian Emenir on 30/09/2023.
 //
 
-import Foundation
-import Combine
+import Foundation /// Imports Foundation
+import Combine /// Imports Combine
 
 /// Defines the Data Model of the app
 final class ModelData: ObservableObject {
@@ -14,10 +14,12 @@ final class ModelData: ObservableObject {
     /// Array of landmarks initialized from landmarkData.json
     @Published var places: [Place] = load("placesDatas.json")
     
+    /// "features" filters the favorite places
     var features: [Place] {
         places.filter { $0.isFeatured }
     }
     
+    /// "categories" creates a Dictionary of places per category
     var categories: [String: [Place]] {
         Dictionary(
             grouping: places,
