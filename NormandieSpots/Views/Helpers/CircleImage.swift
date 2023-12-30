@@ -5,12 +5,15 @@
 //  Created by Dorian Emenir on 09/11/2023.
 //
 
+/// Imports SwiftUI framework
 import SwiftUI
 
 /// Configures an item's image as a circle image
 struct CircleImage: View {
+    /// Variable "image" declaration
     var image: Image
     
+    /// Body contains the image passed in parameter modified by some modifiers
     var body: some View {
         image
             .resizable()
@@ -23,6 +26,7 @@ struct CircleImage: View {
     }
 }
 
+/// Shows a preview of CircleImage with a default parameter
 struct CircleImage_Preview: PreviewProvider {
     static var previews: some View {
         CircleImage(image: Image("etretat"))
