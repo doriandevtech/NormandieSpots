@@ -5,13 +5,13 @@
 //  Created by Dorian Emenir on 30/09/2023.
 //
 
-import Foundation
-import SwiftUI
-import CoreLocation
+import Foundation /// Imports Foundation
+import SwiftUI /// Imports SwiftUI framework
+import CoreLocation /// Imports CoreLocation
 
 /// Defines properties and structures for a given 'Place'
 struct Place: Hashable, Codable, Identifiable {
-    /// Places main properties
+    /// Places main properties declaration
     var id: Int
     var name: String
     var country: String
