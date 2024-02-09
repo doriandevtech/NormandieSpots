@@ -1,6 +1,6 @@
 #  NormandieSpots
 
-## List of places (beaches 🏖️, cities 🏘️, countryside 🐄...) to see in french region Normandie
+## Lists of places to go to (beaches 🏖️, cities 🏘️, countryside 🐄...) in french region Normandie
 
 ### Project type:
 - Open Source project => Feel free to contribute and react to it !
