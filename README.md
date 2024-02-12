@@ -45,7 +45,7 @@
 
 ## Next steps:
 - Create an App icon 🖼️ -> Done ✅ (App icon's v1 is out 👆🏻)
-- Add a 'Home' view 🏠 with categories 
+- Add a 'Home' view 🏠 with categories -> In progress... ⏳
 - Use persisting datas 📊
 - Add UI and Unit tests ✅
-- Add more spots and complementary informations 🆕
+- Add more spots and complementary informations 🆕 -> In progress... ⏳
