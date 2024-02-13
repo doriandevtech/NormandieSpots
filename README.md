@@ -44,7 +44,7 @@
 - v1.0.0-beta will be released in the coming weeks with multiple upgrades, such as a Home view !
 
 ## Next steps:
-- Create an App icon 🖼️ -> Done ✅ (App icon's v1 is out 👆🏻)
+- Create an App icon 🖼️ -> Done ✅ (v1 is out 👆🏻)
 - Add a 'Home' view 🏠 with categories -> In progress... ⏳
 - Use persisting datas 📊
 - Add UI and Unit tests ✅
