@@ -13,7 +13,6 @@
 ### Swift principles used:
 - SwiftUI
 - MapKit
-- Foundation
 
 ## Current state:
 - The v1.0.0-alpha is developped and shown below 👇
