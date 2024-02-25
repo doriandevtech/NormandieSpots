@@ -50,4 +50,3 @@
 - Add a 'Home' view 🏠 with categories -> In progress... ⏳
 - Use persisting datas 📊
 - Add UI and Unit tests ✅
-- Add more spots and complementary informations 🆕 -> In progress... ⏳
