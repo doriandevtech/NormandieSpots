@@ -13,7 +13,6 @@
 ### Swift principles used:
 - SwiftUI
 - MapKit
-- Foundation
 
 ## Current state:
 - The v1.0.0-alpha is developped and shown below 👇
@@ -51,4 +50,3 @@
 - Add a 'Home' view 🏠 with categories -> In progress... ⏳
 - Use persisting datas 📊
 - Add UI and Unit tests ✅
-- Add more spots and complementary informations 🆕 -> In progress... ⏳
