@@ -42,14 +42,10 @@ struct PlaceDetail: View {
                     FavoriteButton(isSet: $modelData.places[placeIndex].isFavorite)
                 }
                 
-///                This HStack shows the place's category and country
-                HStack {
-                    Text(place.category.rawValue)
-                    Spacer()
-                    Text(place.country)
-                }
-                .font(.subheadline)
-                .foregroundColor(.secondary)
+///                Shows the place's category
+                Text(place.category.rawValue)
+                    .font(.subheadline)
+                    .foregroundColor(.secondary)
                 
 ///                Adds a light separation line between the infos and description section
                 Divider()
