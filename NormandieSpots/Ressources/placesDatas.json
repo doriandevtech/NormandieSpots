@@ -68,5 +68,61 @@
         },
         "description": "Hermeville est une commune française située dans le département de la Seine-Maritime en région Normandie.",
         "imageName": "hermeville"
+    },
+    {
+        "name": "Dieppe",
+        "category": "Ville",
+        "country": "France",
+        "id": 1006,
+        "isFeatured": true,
+        "isFavorite": true,
+        "coordinates": {
+            "latitude": 49.597104,
+            "longitude": 0.264312
+        },
+        "description": "Dieppe est une commune française située dans le département de la Seine-Maritime (dont elle est chef-lieu d'arrondissement) en région Normandie. Les habitants de la ville de Dieppe sont appelés les Dieppois.",
+        "imageName": "dieppe"
+    },
+    {
+        "name": "Ville4",
+        "category": "Ville",
+        "country": "France",
+        "id": 1007,
+        "isFeatured": true,
+        "isFavorite": true,
+        "coordinates": {
+            "latitude": 49.597104,
+            "longitude": 0.264312
+        },
+        "description": "Hermeville est une commune française située dans le département de la Seine-Maritime en région Normandie.",
+        "imageName": "hermeville"
+    },
+    {
+        "name": "Ville5",
+        "category": "Ville",
+        "country": "France",
+        "id": 1008,
+        "isFeatured": true,
+        "isFavorite": true,
+        "coordinates": {
+            "latitude": 49.597104,
+            "longitude": 0.264312
+        },
+        "description": "Hermeville est une commune française située dans le département de la Seine-Maritime en région Normandie.",
+        "imageName": "hermeville"
+    },
+    {
+        "name": "Commune5",
+        "category": "Commune",
+        "country": "France",
+        "id": 1009,
+        "isFeatured": true,
+        "isFavorite": true,
+        "coordinates": {
+            "latitude": 49.597104,
+            "longitude": 0.264312
+        },
+        "description": "Hermeville est une commune française située dans le département de la Seine-Maritime en région Normandie.",
+        "imageName": "hermeville"
     }
 ]
