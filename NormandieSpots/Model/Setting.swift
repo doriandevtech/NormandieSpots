@@ -7,7 +7,12 @@
 
 import Foundation
 
+// MARK: Setting
+/// Main aspect: Setting struct - defines the blueprint (variables & methods) for the Setting type
 struct Setting {
+    
+    //    MARK: Variables
+    /// textSize is a Int defining the size for the text's font displayed on screen
     var textSize: Int
     var textSizeAsDouble: Double {
         get {
@@ -21,10 +26,11 @@ struct Setting {
     var isColorLight: Bool
 }
 
+// MARK: Extension
 extension Setting {
     static var sampleData: [Setting] {
         [
-            Setting(textSize: 1, isColorLight: true)
+            Setting(textSize: 5, isColorLight: true)
         ]
     }
     
