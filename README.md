@@ -1,6 +1,6 @@
 #  NormandieSpots
 
-## You want to visit a beautiful, joyfull and ressourcful french region ? Welcome to my app *NormndieSpots*, it will guide you everywhere 😉
+## You want to visit a beautiful, joyfull and ressourcful french region ? Welcome to my app *NormandieSpots*, it will guide you everywhere 😉
 
 ### *NormandieSpots* lists places to go to (beaches 🏖️, cities 🏘️, countryside 🐄...) in french region Normandie
 
