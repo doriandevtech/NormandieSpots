@@ -5,6 +5,7 @@
 //  Created by Dorian Emenir on 22/03/2024.
 //
 
+/// Imports SwiftUI framework
 import SwiftUI
 
 // MARK: SettingsView

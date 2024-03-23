@@ -12,8 +12,9 @@ import Foundation
 struct Setting {
     
     //    MARK: Variables
-    /// textSize is a Int defining the size for the text's font displayed on screen
+    /// textSize is an Int defining the size for the text's font displayed on screen
     var textSize: Int
+    /// textSizeAsDouble is a Double
     var textSizeAsDouble: Double {
         get {
             Double(textSize)

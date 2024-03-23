@@ -5,18 +5,22 @@
 //  Created by Dorian Emenir on 09/11/2023.
 //
 
-import SwiftUI
-import MapKit
+// MARK: Imports
+import SwiftUI /// Imports SwiftUI framework
+import MapKit /// Imports MapKit framework
 
+// MARK: MapView
 /// Configures the map displayed for the PlaceDetail view
 struct MapView: View {
+    
+    // MARK: Variables
     var coordinate: CLLocationCoordinate2D
     
     /// Sets the variable recgion as rectangular geographic region that centers around a specific latitude and longitude
     @State private var region = MKCoordinateRegion()
-    
+    // MARK: View
     var body: some View {
-///        Displays a map for a given region
+        /// Displays a map for a given region
         Map(coordinateRegion: $region)
             .onAppear {
                 setRegion(coordinate)
@@ -33,6 +37,7 @@ struct MapView: View {
     }
 }
 
+// MARK: Preview
 struct MapView_Previews: PreviewProvider {
     static var previews: some View {
         MapView(coordinate: CLLocationCoordinate2D(latitude: 48.84149, longitude: 2.26639))
