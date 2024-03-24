@@ -5,34 +5,37 @@
 //  Created by Dorian Emenir on 30/09/2023.
 //
 
-import Foundation /// Imports Foundation
-import SwiftUI /// Imports SwiftUI framework
-import CoreLocation /// Imports CoreLocation
+// MARK: Imports
+import Foundation
+import SwiftUI
+import CoreLocation
 
+// MARK: Place
 /// Defines properties and structures for a given 'Place'
 struct Place: Hashable, Codable, Identifiable {
-    /// Places main properties declaration
-    var id: Int
-    var name: String
-    var country: String
-    var description: String
-    var isFavorite: Bool
-    var isFeatured: Bool
-    var category: Category
     
-    /// Place's category enum
-    enum Category: String, CaseIterable, Codable {
+    // MARK: Variables
+    var id: Int /// `id`: Int - Place's id
+    var name: String /// `id`: String - Place's name
+    var country: String /// `id`: String - Place's country
+    var description: String /// `id`: String - Place's description
+    var isFavorite: Bool /// `id`: Bool - Place's `isFavorite` attribute
+    var isFeatured: Bool /// `id`: Bool - Place's `isFeatured` attribute
+    var category: Category /// `id`: Category - Place's catgeory
+    
+    /// `Category`: String, CaseIterable, Codable - Place's category enum
+    enum Category: String, Codable {
         case ville = "Ville"
         case commune = "Commune"
     }
     
-    /// Image declaration
+    /// `imageName`: String - Image declaration
     private var imageName: String
     var image: Image {
         Image(imageName)
     }
     
-    /// Location handler
+    /// `coordinates`: Coordinates - Location handler
     private var coordinates: Coordinates
     var locationCoordinate: CLLocationCoordinate2D {
         CLLocationCoordinate2D(
@@ -41,7 +44,7 @@ struct Place: Hashable, Codable, Identifiable {
         )
     }
     
-    /// Coordinates structure reflecting coordinates stored in placesData.JSON
+    /// `Coordinates`: struct defining coordinates stored in `placesData.JSON`
     struct Coordinates: Hashable, Codable {
         var latitude: Double
         var longitude: Double

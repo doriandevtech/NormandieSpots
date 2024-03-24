@@ -14,11 +14,14 @@ import MapKit /// Imports MapKit framework
 struct MapView: View {
     
     // MARK: Variables
+    /// `coordinate`: CLLocationCoordinate2D - contains the latitude and longitude to a given position
     var coordinate: CLLocationCoordinate2D
     
-    /// Sets the variable recgion as rectangular geographic region that centers around a specific latitude and longitude
+    /// `region`: MKCoordinateRegion() - Sets a `State` variable as a rectangular geographic region that centers around a specific latitude and longitude
     @State private var region = MKCoordinateRegion()
+    
     // MARK: View
+    /// MapView's view - contains a list of subviews for the settings of the app
     var body: some View {
         /// Displays a map for a given region
         Map(coordinateRegion: $region)
@@ -27,6 +30,7 @@ struct MapView: View {
             }
     }
     
+    // MARK: Methods
     /// Sets the variable region according to the latitude and longitude values linked to the selected place
     /// - Parameter coordinate: The latitude and longitude associated with the selected place
     private func setRegion(_ coordinate: CLLocationCoordinate2D) {
