@@ -5,14 +5,18 @@
 //  Created by Dorian Emenir on 08/12/2023.
 //
 
-/// Imports SeiftUI framework
-import SwiftUI
+// MARK: Imports
+import SwiftUI /// Imports SwiftUI framework
 
+// MARK: CategoryHome
 /// Main aspect: displays a NavigationSplitView of a featured place's image and a row for each category
 struct CategoryHome: View {
+    
+    // MARK: Variables
     /// Declares modelData as an EnvironmentObject
     @EnvironmentObject var modelData: ModelData
     
+    // MARK: CategoryHome's view
     /// The "body" contains a NavigationSplitView of a featured place's image and a row for each category
     var body: some View {
         NavigationSplitView {
@@ -39,6 +43,7 @@ struct CategoryHome: View {
     }
 }
 
+// MARK: Preview
 /// Shows a preview of CategoryHome
 struct CategoryHome_Previews: PreviewProvider {
     static var previews: some View {
