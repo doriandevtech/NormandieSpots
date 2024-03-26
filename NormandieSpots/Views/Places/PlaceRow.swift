@@ -5,15 +5,20 @@
 //  Created by Dorian Emenir on 09/11/2023.
 //
 
-import SwiftUI
+// MARK: Imports
+import SwiftUI /// Import SwiftUI framework
 
+// MARK: PlaceRow
 /// Main aspect :  PlaceRow defines a lonely item
 /// sub aspects :
 /// - Its name, picture are shown by default
 /// - A ⭐️ (star) can be shown if the place is in the "favorite" list
 struct PlaceRow: View {
-    var place: Place
     
+    // MARK: Variable
+    var place: Place /// place: Place - place's declaration
+    
+    // MARK: PlaceRow's view
     var body: some View {
         HStack {
             place.image
@@ -24,7 +29,7 @@ struct PlaceRow: View {
             
             Spacer()
             
-///         Shows a yellow ⭐️ (star) if the place is registered as a favorite one
+            /// Shows a yellow ⭐️ (star) if the place is registered as a favorite one
             if place.isFavorite {
                 Image(systemName: "star.fill")
                     .foregroundColor(.yellow)
@@ -33,7 +38,10 @@ struct PlaceRow: View {
     }
 }
 
+// MARK: Preview
 struct PlaceRow_Previews: PreviewProvider {
+    
+    // MARK: Preview's variables
     static var places = ModelData().places
     
     static var previews: some View {
