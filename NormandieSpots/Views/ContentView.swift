@@ -5,13 +5,16 @@
 //  Created by Dorian Emenir on 30/09/2023.
 //
 
-import SwiftUI
+// MARK: Imports
+import SwiftUI /// Imports SwiftUI framework
 
+// MARK: ContentView
 struct ContentView: View {
-    /// Defines "Home" view as the default view at app lauch
-    @State private var selection: Tab = .home
     
-    @Binding var setting: [Setting]
+    // MARK: Variables
+    @State private var selection: Tab = .home /// selection: Tab - "Home" view as the default view at app lauch
+    
+    @Binding var setting: [Setting] /// setting: [Setting] - declares setting as a list of settings
     
     /// Enum "Tab" contains the list of tabs
     enum Tab {
@@ -20,6 +23,7 @@ struct ContentView: View {
         case setting
     }
     
+    // MARK: ContentView's view
     /// Defines the content of "body" with a TabView and an item per tab
     var body: some View {
         TabView(selection: $selection) {
@@ -47,7 +51,7 @@ struct ContentView: View {
     }
 }
 
-/// Previews the ContentView view
+// MARK: Preview
 struct ContentView_Preview: PreviewProvider {
     static var previews: some View {
         ContentView(setting: .constant(Setting.sampleData))
