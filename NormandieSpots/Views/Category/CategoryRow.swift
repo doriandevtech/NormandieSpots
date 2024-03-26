@@ -5,18 +5,19 @@
 //  Created by Dorian Emenir on 08/12/2023.
 //
 
-/// Imports SwiftUI framework
-import SwiftUI
+// MARK: Imports
+import SwiftUI /// Imports SwiftUI framework
 
-/// Main aspect :  CategoryRow shows the list of a places for s given category
+// MARK: CategoryRow
+/// Main aspect: CategoryRow shows the list of a places for s given category
 struct CategoryRow: View {
     
-    /// Variables declaration
-    var categoryName: String
-    var placesList: [Place]
-    var places = ModelData().places
+    // MARK: Variables
+    var categoryName: String /// categoryName: String - Category's name
+    var placesList: [Place] /// placesList: [Place] - List of places
+    var places = ModelData().places /// places: - Places
     
-    /// body's content
+    // MARK: CategoryRow's View
     var body: some View {
         /// This VStack groups the category's name and a ScrollView of the linked places
         VStack {
@@ -43,6 +44,7 @@ struct CategoryRow: View {
     }
 }
 
+// MARK: Preview
 /// Shows a preview of CategoryRow with default parameters
 struct CategoryRow_Preview: PreviewProvider {
     static var places = ModelData().places
