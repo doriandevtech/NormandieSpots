@@ -5,18 +5,20 @@
 //  Created by Dorian Emenir on 13/10/2023.
 //
 
-import SwiftUI
+// MARK: Imports
+import SwiftUI /// Import SwiftUI framework
 
+// MARK: PlacesList
 /// Main aspect :  PlaceList configures a list of places
 /// sub aspects : PlaceList can filter places using there "isFavorite" attribute
 struct PlaceList: View {
+    
+    // MARK: Variables
     /// Declares modelData an instance of the data model ModelData in PlaceList
     @EnvironmentObject var modelData: ModelData
-    
 
     /// Private variable for the "Show favorite" toggle
     @State private var showFavOnly = false
-    
     
     /// Private variable for the "Delete alert popup"
     @State private var showDeleteAlert = false
@@ -27,7 +29,8 @@ struct PlaceList: View {
             (!showFavOnly || place.isFavorite)
         }
     }
-        
+    
+    // MARK: PlaceList's view    
     var body: some View {
         NavigationView {
             List {
@@ -79,6 +82,7 @@ struct PlaceList: View {
     }
 }
 
+// MARK: Preview
 struct PlaceList_Previews: PreviewProvider {
     static var previews: some View {
         PlaceList()
