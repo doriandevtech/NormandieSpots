@@ -5,13 +5,17 @@
 //  Created by Dorian Emenir on 09/11/2023.
 //
 
-import SwiftUI
+// MARK: Imports
+import SwiftUI /// Imports SwiftUI framework
 
+// MARK: FavoriteButton
 /// The button is toggled when clicked and its value goes from a yellow ⭐️ (filled star) to an empty grey ⭐️ (star)
 struct FavoriteButton: View {
-    /// isSet binding indicates the favorite button's current state, and provide a constant value for the preview
-    @Binding var isSet: Bool
     
+    // MARK: Variables
+    @Binding var isSet: Bool     /// isSet: Bool - binding indicates the favorite button's current state, and provide a constant value for the preview
+    
+    // MARK: FavoriteButton's view
     var body: some View {
         Button {
             isSet.toggle()
@@ -23,6 +27,7 @@ struct FavoriteButton: View {
     }
 }
 
+// MARK: Preview
 struct FavoriteButton_Previews: PreviewProvider {
     static var previews: some View {
         FavoriteButton(isSet: .constant(false))
