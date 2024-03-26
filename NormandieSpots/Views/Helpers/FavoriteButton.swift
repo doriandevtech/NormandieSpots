@@ -13,7 +13,7 @@ import SwiftUI /// Imports SwiftUI framework
 struct FavoriteButton: View {
     
     // MARK: Variables
-    @Binding var isSet: Bool     /// isSet: Bool - binding indicates the favorite button's current state, and provide a constant value for the preview
+    @Binding var isSet: Bool /// isSet: Bool - binding indicates the favorite button's current state, and provide a constant value for the preview
     
     // MARK: FavoriteButton's view
     var body: some View {
