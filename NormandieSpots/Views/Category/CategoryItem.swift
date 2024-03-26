@@ -5,15 +5,17 @@
 //  Created by Dorian Emenir on 08/12/2023.
 //
 
-/// Imports SwiftUI framework
-import SwiftUI
+// MARK: Imports
+import SwiftUI /// Imports SwiftUI framework
 
+// MARK: CategoryItem
 /// Main aspect: CategoryItem contains a VStack of a given place's image and a HStack with its name and isFavorite value
 struct CategoryItem: View {
     
-    /// "place" variable declaration
-    var place: Place
+    // MARK: Variables
+    var place: Place /// place: Place - place's declaration
     
+    // MARK: CategoryItem's view
     /// "body" contains a VStack of the place's image and a HStack with its name and isFavorite value
     var body: some View {
         VStack(alignment: .leading) {
@@ -40,7 +42,7 @@ struct CategoryItem: View {
     }
 }
 
-/// Shows a preview of the CategoryItem view with given datas
+// MARK: Preview
 #Preview {
     CategoryItem(place: ModelData().places[0])
 }
