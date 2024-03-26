@@ -5,23 +5,25 @@
 //  Created by Dorian Emenir on 09/11/2023.
 //
 
-import SwiftUI
+// MARK: Imports
+import SwiftUI /// Imports SwiftUI framework
 
+// MARK: PlaceDetail
 /// Main aspect :  PlaceDetail shows the details of a selected place (Location, Image, Description, Country...)
 /// sub aspects : A place can also be made "favorite" or taken out from this list in this view
 struct PlaceDetail: View {
-
+    
+    // MARK: Variables
     /// Declares modelData as an instance of the data model ModelData in PlaceDetail
     @EnvironmentObject var modelData: ModelData
     var place: Place
-    
     
     /// "placeIndex" compares the input place's id with the one in the model data
     var placeIndex: Int {
         modelData.places.firstIndex(where: { $0.id == place.id })!
     }
     
-    /// body's content
+    // MARK: PlaceDetail's view
     var body: some View {
         ScrollView {
 ///            Configure the map view of the selected place
@@ -62,7 +64,7 @@ struct PlaceDetail: View {
     }
 }
 
-/// Previews the PlaceDetail view
+// MARK: Preview
 struct PlaceDetail_Previews: PreviewProvider {
     static let modelData = ModelData()
     
