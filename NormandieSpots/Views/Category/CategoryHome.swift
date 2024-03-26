@@ -13,7 +13,7 @@ import SwiftUI /// Imports SwiftUI framework
 struct CategoryHome: View {
     
     // MARK: Variables
-    /// Declares modelData as an EnvironmentObject
+    /// modelData: ModelData - Declares modelData as an EnvironmentObject
     @EnvironmentObject var modelData: ModelData
     
     // MARK: CategoryHome's view
