@@ -6,9 +6,9 @@
 //
 
 // MARK: Imports
-import Foundation
-import SwiftUI
-import CoreLocation
+import Foundation /// Imports Foundation
+import SwiftUI /// Imports SwiftUI framework
+import CoreLocation /// Imports CoreLocation
 
 // MARK: Place
 /// Defines properties and structures for a given 'Place'
