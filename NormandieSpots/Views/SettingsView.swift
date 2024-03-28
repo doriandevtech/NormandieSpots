@@ -5,8 +5,8 @@
 //  Created by Dorian Emenir on 22/03/2024.
 //
 
-/// Imports SwiftUI framework
-import SwiftUI
+// MARK: Imports
+import SwiftUI /// Imports SwiftUI framework
 
 // MARK: SettingsView
 /// Main aspect: SettingsView shows a list of settings to configure the app
