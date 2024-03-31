@@ -13,14 +13,11 @@ struct ContentView: View {
     
     // MARK: Variables
     @State private var selection: Tab = .home /// selection: Tab - "Home" view as the default view at app lauch
-    
-    @Binding var setting: [Setting] /// setting: [Setting] - declares setting as a list of settings
-    
+        
     /// Enum "Tab" contains the list of tabs
     enum Tab {
         case home
         case list
-        case setting
     }
     
     // MARK: ContentView's view
@@ -40,13 +37,6 @@ struct ContentView: View {
                     Label("Lieux", systemImage: "list.bullet")
                 }
                 .tag(Tab.list) /// PlaceList - tab "list" link
-            
-            /// SettingsView()
-            SettingsView(setting: .constant(.sampleData[0]))
-                .tabItem {
-                    Label("Réglages", systemImage: "slider.horizontal.3")
-                }
-                .tag(Tab.setting)
         }
     }
 }
@@ -54,7 +44,7 @@ struct ContentView: View {
 // MARK: Preview
 struct ContentView_Preview: PreviewProvider {
     static var previews: some View {
-        ContentView(setting: .constant(Setting.sampleData))
+        ContentView()
             .environmentObject(ModelData())
     }
 }
