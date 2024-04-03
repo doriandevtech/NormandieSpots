@@ -16,6 +16,7 @@ struct CategoryHome: View {
     /// modelData: ModelData - Declares modelData as an EnvironmentObject
     @EnvironmentObject var modelData: ModelData
     
+    
     // MARK: CategoryHome's view
     /// The "body" contains a NavigationSplitView of a featured place's image and a row for each category
     var body: some View {

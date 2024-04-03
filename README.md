@@ -2,7 +2,7 @@
 
 ## You want to visit a beautiful, joyfull and ressourcful french region ? Welcome to my app *NormandieSpots*, it will guide you everywhere 😉
 
-### *NormandieSpots* lists places to go to (beaches 🏖️, cities 🏘️, countryside 🐄...) in french region Normandie
+### *NormandieSpots* lists places to go to (beaches 🏖️, cities 🏘️, countryside 🐄...) in the french region Normandie
 
 ### Project type:
 - Open Source project => Feel free to contribute and react to it !
@@ -27,11 +27,12 @@
 <img width="160" alt="Capture d’écran 2023-11-21 à 12 53 57 AM" src="https://github.com/doriandevtech/NormandieSpots/assets/61510923/84cd0f53-1969-4d97-85e3-b3143fbdc701">
 
 ### Home page view:
+<img width="240" alt="Capture d’écran 2024-04-01 à 10 59 58 AM" src="https://github.com/doriandevtech/NormandieSpots/assets/61510923/8f36d138-2f8f-4fbd-b595-1ce23c01436b">
 
+### List of items page view:
 <img width="240" alt="Capture d’écran 2023-11-10 à 5 01 56 PM" src="https://github.com/doriandevtech/NormandieSpots/assets/61510923/b04aecd9-2356-40ad-a6aa-d1a71bfd6ea7">
 
 ### Detailed item's view:
-
 <img width="240" alt="Capture d’écran 2023-11-10 à 4 54 04 PM" src="https://github.com/doriandevtech/NormandieSpots/assets/61510923/9990901e-6348-490c-b782-999ad635389a">
 
 ### Each spot can be made "favorite" and filtered as such:

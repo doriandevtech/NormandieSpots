@@ -20,12 +20,12 @@ struct CategoryRow: View {
     // MARK: CategoryRow's View
     var body: some View {
         /// This VStack groups the category's name and a ScrollView of the linked places
-        VStack {
+        VStack(alignment: .leading) {
+            
             /// Category's name
             Text(categoryName)
-                .font(.headline)
-                .padding(.leading, 15)
-                .padding(.top, 5)
+                .font(.title3)
+                .padding()
             
             /// ScrollView of the places inside this category
             ScrollView(.horizontal, showsIndicators: false) {
