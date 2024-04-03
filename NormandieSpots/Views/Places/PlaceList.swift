@@ -14,14 +14,17 @@ import SwiftUI /// Import SwiftUI framework
 struct PlaceList: View {
     
     // MARK: Variables
-    /// Declares modelData an instance of the data model ModelData in PlaceList
+    /// @EnvironmentObject modelData an instance of the data model ModelData in PlaceList: ModelData
     @EnvironmentObject var modelData: ModelData
 
-    /// Private variable for the "Show favorite" toggle
+    /// @State variable for the "Show favorite" toggle: Bool
     @State private var showFavOnly = false
     
-    /// Private variable for the "Delete alert popup"
+    /// @State variable for the "Delete alert popup": Bool
     @State private var showDeleteAlert = false
+    
+    /// @State variable isPresentingNewSpotView: Bool
+    @State private var isPresentingNewSpotView = false
     
     /// filteredPlaces shows only favorite places when "Show favorite" toggle is on
     var filteredPlaces: [Place] {
@@ -78,6 +81,17 @@ struct PlaceList: View {
                     }
                 )
             }
+            .toolbar {
+                Button(action: {
+                    isPresentingNewSpotView = true
+                }) {
+                    Image(systemName: "plus")
+                }
+                .accessibilityLabel("Ajout d'un nouveau lieu")
+            }
+            .sheet(isPresented: $isPresentingNewSpotView, content: {
+                NewPlaceView()
+            })
         }
     }
 }
