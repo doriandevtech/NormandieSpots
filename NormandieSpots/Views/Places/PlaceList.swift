@@ -90,7 +90,7 @@ struct PlaceList: View {
                 .accessibilityLabel("Ajout d'un nouveau lieu")
             }
             .sheet(isPresented: $isPresentingNewSpotView, content: {
-                NewPlaceView()
+                NewPlaceView(name: <#T##Binding<String>#>, category: <#T##Binding<String>#>)
             })
         }
     }
