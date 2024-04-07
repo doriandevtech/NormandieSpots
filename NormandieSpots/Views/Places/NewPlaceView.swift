@@ -8,23 +8,20 @@
 import SwiftUI
 
 struct NewPlaceView: View {
-    @State private var name: String
-    @State private var category: String
+    @State private var newPlace = Place.emptyPlace
+    @Binding var place: Place
+    @Binding var isPresentingNewPlaceSheet: Bool
     
     var body: some View {
-        VStack {
+        NavigationView {
             Form {
-                TextField(text: $name, prompt: Text("Required")) {
-                    Text("Name")
-                }
-                TextField(text: $category, prompt: Text("Required")) {
-                    Text("Category")
-                }
+                TextField("Nom du lieu", text: $place.name)
             }
         }
+        .navigationTitle("Hello")
     }
 }
 
 #Preview {
-    NewPlaceView(name: "Hello", category: "Ville")
+    NewPlaceView(place: .constant(Place.sampleData[0]), isPresentingNewPlaceSheet: .constant(true))
 }
