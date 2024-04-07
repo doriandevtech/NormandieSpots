@@ -23,6 +23,18 @@ struct Place: Hashable, Codable, Identifiable {
     var isFeatured: Bool /// `id`: Bool - Place's `isFeatured` attribute
     var category: Category /// `id`: Category - Place's catgeory
     
+    init(id: Int, name: String, country: String, description: String, isFavorite: Bool, isFeatured: Bool, category: Category, imageName: String, coordinates: Coordinates) {
+        self.id = id
+        self.name = name
+        self.country = country
+        self.description = description
+        self.isFavorite = isFavorite
+        self.isFeatured = isFeatured
+        self.category = category
+        self.imageName = imageName
+        self.coordinates = coordinates
+    }
+    
     /// `Category`: String, CaseIterable, Codable - Place's category enum
     enum Category: String, Codable {
         case ville = "Ville"
@@ -49,4 +61,19 @@ struct Place: Hashable, Codable, Identifiable {
         var latitude: Double
         var longitude: Double
     }
+}
+
+extension Place {
+    static var emptyPlace: Place {
+        Place(id: 0, name: "", country: "", description: "", isFavorite: false, isFeatured: false, category: Category.commune, imageName: "", coordinates: Coordinates(latitude: 1.0, longitude: 1.0))
+    }
+}
+
+extension Place {
+    static var sampleData: [Place] {
+        [
+            Place(id: 1, name: "Name", country: "Country", description: "Description", isFavorite: true, isFeatured: true, category: Category.ville, imageName: "", coordinates: Coordinates(latitude: 0.0, longitude: 0.0))
+        ]
+    }
+    
 }
