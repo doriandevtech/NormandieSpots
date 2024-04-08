@@ -15,10 +15,15 @@ struct NewPlaceView: View {
     var body: some View {
         NavigationView {
             Form {
-                TextField("Nom du lieu", text: $place.name)
+                Section("Nouveau lieu") {
+                    TextField("Nom du lieu", text: $newPlace.name)
+                    TextField("Nom du pays", text: $newPlace.country)
+                    Toggle(isOn: $newPlace.isFavorite) {
+                        Label("Ajouter aux favoris", systemImage: "star.fill")
+                    }
+                }
             }
         }
-        .navigationTitle("Hello")
     }
 }
 
