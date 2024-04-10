@@ -4,11 +4,11 @@
         "category": "Ville",
         "country": "France",
         "id": 1001,
-        "isFeatured": true,
         "isFavorite": false,
+        "isFeatured": false,
         "coordinates": {
-            "latitude": 49.70703471461734,
-            "longitude": 0.2053075022712043
+            "latitude": 49.707034,
+            "longitude": 0.205307
         },
         "description": "Étretat [etʁəta] est une commune française située dans le département de la Seine-Maritime en région Normandie. Jadis modeste village de pêcheurs, Étretat devient au XIXᵉ siècle une station balnéaire de renom. Jacques Offenbach ou Guy de Maupassant y organisent des fêtes pour leurs cercles d'amis.",
         "imageName": "etretat"
@@ -18,8 +18,8 @@
         "category": "Commune",
         "country": "France",
         "id": 1002,
-        "isFeatured": true,
         "isFavorite": true,
+        "isFeatured": false,
         "coordinates": {
             "latitude": 49.418767,
             "longitude": 0.232928
@@ -32,8 +32,8 @@
         "category": "Commune",
         "country": "France",
         "id": 1003,
-        "isFeatured": true,
         "isFavorite": false,
+        "isFeatured": false,
         "coordinates": {
             "latitude": 49.870494,
             "longitude": 0.801649
@@ -46,8 +46,8 @@
         "category": "Ville",
         "country": "France",
         "id": 1004,
-        "isFeatured": true,
         "isFavorite": true,
+        "isFeatured": false,
         "coordinates": {
             "latitude": 49.494884,
             "longitude": 0.108876
@@ -60,8 +60,8 @@
         "category": "Commune",
         "country": "France",
         "id": 1005,
-        "isFeatured": true,
         "isFavorite": true,
+        "isFeatured": false,
         "coordinates": {
             "latitude": 49.597104,
             "longitude": 0.264312
@@ -74,55 +74,97 @@
         "category": "Ville",
         "country": "France",
         "id": 1006,
-        "isFeatured": true,
         "isFavorite": true,
+        "isFeatured": false,
         "coordinates": {
-            "latitude": 49.597104,
-            "longitude": 0.264312
+            "latitude": 49.922792,
+            "longitude": 1.076186
         },
         "description": "Dieppe est une commune française située dans le département de la Seine-Maritime (dont elle est chef-lieu d'arrondissement) en région Normandie. Les habitants de la ville de Dieppe sont appelés les Dieppois.",
         "imageName": "dieppe"
     },
     {
-        "name": "Ville4",
-        "category": "Ville",
-        "country": "France",
-        "id": 1007,
-        "isFeatured": true,
-        "isFavorite": true,
-        "coordinates": {
-            "latitude": 49.597104,
-            "longitude": 0.264312
-        },
-        "description": "Hermeville est une commune française située dans le département de la Seine-Maritime en région Normandie.",
-        "imageName": "hermeville"
-    },
-    {
-        "name": "Ville5",
-        "category": "Ville",
-        "country": "France",
-        "id": 1008,
-        "isFeatured": true,
-        "isFavorite": true,
-        "coordinates": {
-            "latitude": 49.597104,
-            "longitude": 0.264312
-        },
-        "description": "Hermeville est une commune française située dans le département de la Seine-Maritime en région Normandie.",
-        "imageName": "hermeville"
-    },
-    {
-        "name": "Commune5",
+        "name": "Criquetot",
         "category": "Commune",
         "country": "France",
-        "id": 1009,
-        "isFeatured": true,
+        "id": 1007,
         "isFavorite": true,
+        "isFeatured": false,
         "coordinates": {
-            "latitude": 49.597104,
-            "longitude": 0.264312
+            "latitude": 49.643640,
+            "longitude": 0.265858
+        },
+        "description": "Criquetot-l'Esneval est une commune française située dans le département de la Seine-Maritime en région Normandie.",
+        "imageName": "criquetot"
+    },
+    {
+        "name": "Bolbec",
+        "category": "Commune",
+        "country": "France",
+        "id": 1008,
+        "isFavorite": true,
+        "isFeatured": false,
+        "coordinates": {
+            "latitude": 49.572945,
+            "longitude": 0.473702
+        },
+        "description": "Bolbec est une commune française, située dans le département de la Seine-Maritime en région Normandie.",
+        "imageName": "bolbec"
+    },
+    {
+        "name": "Le Mont Saint-Michel",
+        "category": "Monument",
+        "country": "France",
+        "id": 1009,
+        "isFavorite": true,
+        "isFeatured": false,
+        "coordinates": {
+            "latitude": 48.636081,
+            "longitude": -1.509950
+        },
+        "description": "Le Mont-Saint-Michel est une commune française située dans la Manche en Normandie. Elle tire son nom de l'îlot rocheux consacré à saint Michel où s’élève aujourd’hui l’abbaye du Mont-Saint-Michel.",
+        "imageName": "mont_saint_michel"
+    },
+    {
+        "name": "Deauville",
+        "category": "Ville",
+        "country": "France",
+        "id": 1010,
+        "isFavorite": true,
+        "isFeatured": false,
+        "coordinates": {
+            "latitude": 49.359564,
+            "longitude": 0.074669
         },
         "description": "Hermeville est une commune française située dans le département de la Seine-Maritime en région Normandie.",
         "imageName": "hermeville"
+    },
+    {
+        "name": "Trouville-sur-Mer",
+        "category": "Ville",
+        "country": "France",
+        "id": 1011,
+        "isFavorite": false,
+        "isFeatured": false,
+        "coordinates": {
+            "latitude": 49.365279,
+            "longitude": 0.081757
+        },
+        "description": "Trouville-sur-Mer est une commune française, située dans le département du Calvados en Normandie, sa population s'élève à 4 603 habitants.",
+        "imageName": "trouville_sur_mer"
+    },
+    {
+        "name": "Cabourg",
+        "category": "Ville",
+        "country": "France",
+        "id": 1012,
+        "isFavorite": true,
+        "isFeatured": false,
+        "coordinates": {
+            "latitude": 49.290464,
+            "longitude": -0.116114
+        },
+        "description": "Cabourg est une commune française située dans le département du Calvados, région Normandie.",
+        "imageName": "cabourg"
     }
 ]
