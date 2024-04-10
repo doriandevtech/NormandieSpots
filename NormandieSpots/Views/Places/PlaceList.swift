@@ -26,7 +26,7 @@ struct PlaceList: View {
     /// @State variable isPresentingNewSpotView: Bool
     @State private var isPresentingNewSpotView = false
     
-    @Binding var place: Place
+    @Binding var places: [Place]
     
     /// filteredPlaces shows only favorite places when "Show favorite" toggle is on
     var filteredPlaces: [Place] {
@@ -91,9 +91,9 @@ struct PlaceList: View {
                 }
                 .accessibilityLabel("Ajout d'un nouveau lieu")
             }
-            .sheet(isPresented: $isPresentingNewSpotView, content: {
-                NewPlaceView(place: $place, isPresentingNewPlaceSheet: .constant(false))
-            })
+            .sheet(isPresented: $isPresentingNewSpotView) {
+                NewPlaceView(places: $places, isPresentingNewPlaceSheet: $isPresentingNewSpotView)
+            }
         }
     }
 }
@@ -101,7 +101,7 @@ struct PlaceList: View {
 // MARK: Preview
 struct PlaceList_Previews: PreviewProvider {
     static var previews: some View {
-        PlaceList(place: .constant(Place.sampleData[0]))
+        PlaceList(places: .constant(Place.sampleData))
             .environmentObject(ModelData())
     }
 }

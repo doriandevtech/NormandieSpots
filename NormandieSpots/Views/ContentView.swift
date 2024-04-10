@@ -14,7 +14,7 @@ struct ContentView: View {
     // MARK: Variables
     @State private var selection: Tab = .home /// selection: Tab - "Home" view as the default view at app lauch
     
-    @Binding var place: Place
+    @Binding var places: [Place]
         
     /// Enum "Tab" contains the list of tabs
     enum Tab {
@@ -34,7 +34,7 @@ struct ContentView: View {
                 .tag(Tab.home) /// CategoryHome - tab "home" link
             
             /// PlaceList view - "list" tabItem
-            PlaceList(place: $place)
+            PlaceList(places: $places)
                 .tabItem { /// PlaceList - tabItem's content
                     Label("Lieux", systemImage: "list.bullet")
                 }
@@ -46,7 +46,7 @@ struct ContentView: View {
 // MARK: Preview
 struct ContentView_Preview: PreviewProvider {
     static var previews: some View {
-        ContentView(place: .constant(Place.sampleData[0]))
+        ContentView(places: .constant(Place.sampleData))
             .environmentObject(ModelData())
     }
 }
