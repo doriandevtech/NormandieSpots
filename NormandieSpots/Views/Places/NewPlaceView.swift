@@ -33,7 +33,6 @@ struct NewPlaceView: View {
                     Button("Add") {
                         places.append(newPlace)
                         isPresentingNewPlaceSheet = false
-                        print(places.last)
                     }
                 }
             }
