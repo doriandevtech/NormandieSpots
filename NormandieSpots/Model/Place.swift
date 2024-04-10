@@ -27,6 +27,7 @@ struct Place: Hashable, Codable, Identifiable {
     enum Category: String, Codable {
         case ville = "Ville"
         case commune = "Commune"
+        case monument = "Monument"
     }
     
     /// `imageName`: String - Image declaration
