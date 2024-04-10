@@ -9,7 +9,7 @@ import SwiftUI
 
 struct NewPlaceView: View {
     @State private var newPlace = Place.emptyPlace
-    @Binding var place: Place
+    @Binding var places: [Place]
     @Binding var isPresentingNewPlaceSheet: Bool
     
     var body: some View {
@@ -23,10 +23,24 @@ struct NewPlaceView: View {
                     }
                 }
             }
+            .toolbar {
+                ToolbarItem(placement: .cancellationAction) {
+                    Button("Dismiss") {
+                        isPresentingNewPlaceSheet = false
+                    }
+                }
+                ToolbarItem(placement: .confirmationAction) {
+                    Button("Add") {
+                        places.append(newPlace)
+                        isPresentingNewPlaceSheet = false
+                        print(places.last)
+                    }
+                }
+            }
         }
     }
 }
 
 #Preview {
-    NewPlaceView(place: .constant(Place.sampleData[0]), isPresentingNewPlaceSheet: .constant(true))
+    NewPlaceView(places: .constant(Place.sampleData), isPresentingNewPlaceSheet: .constant(true))
 }
