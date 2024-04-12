@@ -18,7 +18,7 @@ struct CategoryHome: View {
     
     
     // MARK: CategoryHome's view
-    /// The "body" contains a NavigationSplitView of a featured place's image and a row for each category
+    /// body: View - contains a NavigationSplitView of a featured place's image and a row for each category
     var body: some View {
         NavigationSplitView {
             List {
@@ -37,7 +37,6 @@ struct CategoryHome: View {
 }
 
 // MARK: Preview
-/// Shows a preview of CategoryHome
 struct CategoryHome_Previews: PreviewProvider {
     static var previews: some View {
         CategoryHome()

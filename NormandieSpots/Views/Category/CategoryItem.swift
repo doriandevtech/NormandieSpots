@@ -13,13 +13,14 @@ import SwiftUI /// Imports SwiftUI framework
 struct CategoryItem: View {
     
     // MARK: Variables
-    var place: Place /// place: Place - place's declaration
+    /// place: Place - place's declaration
+    var place: Place
     
     // MARK: CategoryItem's view
-    /// "body" contains a VStack of the place's image and a HStack with its name and isFavorite value
+    /// body: View - contains a VStack of the place's image and a HStack with its name and isFavorite value
     var body: some View {
         VStack(alignment: .leading) {
-            /// places image
+            /// Place's image
             place.image
                 .renderingMode(.original)
                 .resizable()
@@ -27,7 +28,7 @@ struct CategoryItem: View {
                 .clipShape(RoundedRectangle(cornerRadius: 10))
                 .shadow(radius: 2)
                 
-            /// This HStsck contains the place's name and its isFavorite value
+            /// Contains the place's name and its isFavorite value
             HStack {
                 Text(place.name)
                     .foregroundStyle(.primary)
