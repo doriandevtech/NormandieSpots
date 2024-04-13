@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import CoreLocation
 
 struct NewPlaceView: View {
     
@@ -17,6 +18,9 @@ struct NewPlaceView: View {
     
     @State private var isAddButtonEnabled = true
     
+    @State private var selectedCategory: Place.Category = .ville
+    
+    
     var body: some View {
         NavigationView {
             Form {
@@ -26,10 +30,25 @@ struct NewPlaceView: View {
                 Section("Où se situe ce lieu ?") {
                     TextField("Nom du pays", text: $newPlace.country)
                 }
-                Section("Ajouter ce lieu aux favoris ?") {
-                    Toggle(isOn: $newPlace.isFavorite) {
-                        Label("Ajouter aux favoris", systemImage: "star.fill")
+                Section("Quel est le type de lieu ?") {
+                    Picker(selection: $selectedCategory, label: Text("Catégorie")) {
+                        Text("Ville").tag(Place.Category.ville)
+                        Text("Monument").tag(Place.Category.monument)
+                        Text("Commune").tag(Place.Category.commune)
                     }
+                    .pickerStyle(.segmented)
+                }
+                Section {
+                    Toggle(isOn: $newPlace.isFavorite) {
+                        Text("Ajouter aux favoris ?")
+                    }
+                }
+                Section("Ajouter une photo ?") {
+                    Button(action: {
+                        let _ = print("hello")
+                    }, label: {
+                        Text("Importer une photo")
+                    })
                 }
             }
             .toolbar {
