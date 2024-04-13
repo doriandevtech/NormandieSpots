@@ -14,21 +14,23 @@ import SwiftUI /// Import SwiftUI framework
 struct PlaceList: View {
     
     // MARK: Variables
-    /// @EnvironmentObject modelData an instance of the data model ModelData in PlaceList: ModelData
+    /// modelData: ModelData - Declares modelData as an EnvironmentObject
     @EnvironmentObject var modelData: ModelData
 
-    /// @State variable for the "Show favorite" toggle: Bool
+    /// showFavOnly: Bool - State variable for the "Show favorite" toggle
     @State private var showFavOnly = false
     
-    /// @State variable for the "Delete alert popup": Bool
+    /// showDeleteAlert: Bool - State variable for the "Delete alert" popup
     @State private var showDeleteAlert = false
     
-    /// @State variable isPresentingNewSpotView: Bool
+    /// isPresentingNewSpotView: Bool - State variable for the showing of NewPlaceView( ) view
     @State private var isPresentingNewSpotView = false
     
+    /// places: [Places] - Binding to the list of places
     @Binding var places: [Place]
     
-    /// filteredPlaces shows only favorite places when "Show favorite" toggle is on
+    /// filteredPlaces: [Place] - filters the favorite places from the list of places
+    /// shows only favorite places when "Show favorite" toggle is on
     var filteredPlaces: [Place] {
         modelData.places.filter { place in
             (!showFavOnly || place.isFavorite)
@@ -39,22 +41,18 @@ struct PlaceList: View {
     var body: some View {
         NavigationView {
             List {
-///                Adds a isFavorite toggle item
-                Toggle(isOn: $showFavOnly, label: {
+                Toggle(isOn: $showFavOnly, label: { /// Adds a isFavorite toggle item
                     Text("Favoris")
                 })
                 
-///                Each place has a link from PlaceRow redirecting to its PlaceDetail view
-                ForEach(filteredPlaces) { place in
+                ForEach(filteredPlaces) { place in  /// Each place has a link from PlaceRow( ) redirecting to its PlaceDetail( ) view
                     NavigationLink {
                         PlaceDetail(place: place)
                     } label: {
                         PlaceRow(place: place)
                     }
                 }
-                
-///                Swipe action for each row - "Delete" and "Add to favorite list":
-                .swipeActions(edge: .trailing) {
+                .swipeActions(edge: .trailing) {    /// Swipe action for each row - "Delete" from list" - TODO: In Progress...
                     Button {
                         withAnimation { showDeleteAlert.toggle() }
                     } label: {
@@ -62,7 +60,7 @@ struct PlaceList: View {
                     }
                     .tint(.red)
                 }
-                .swipeActions(edge: .leading) {
+                .swipeActions(edge: .leading) {     /// Swipe action for each row - "Add" to favorite list"
                     Button {
                         if ((filteredPlaces.firstIndex(where: { $0.id == 1002})) != nil) {
                             print("hello")
@@ -74,7 +72,7 @@ struct PlaceList: View {
                 }
             }
             .navigationTitle("Lieux")
-            .alert(isPresented: $showDeleteAlert) {
+            .alert(isPresented: $showDeleteAlert) { /// Shows this alert when the "Delete" swipeAction is performed
                 Alert(
                     title: Text("Confirmez-vous la suppression de ce lieu ?"),
                     primaryButton: .cancel(Text("Annuler")),
@@ -83,7 +81,7 @@ struct PlaceList: View {
                     }
                 )
             }
-            .toolbar {
+            .toolbar {                              /// "+" button toggling the NewPlaceView( ) when pressed
                 Button(action: {
                     isPresentingNewSpotView = true
                 }) {
