@@ -15,8 +15,9 @@ import SwiftUI /// Import SwiftUI framework
 /// - A ⭐️ (star) can be shown if the place is in the "favorite" list
 struct PlaceRow: View {
     
-    // MARK: Variable
-    var place: Place /// place: Place - place's declaration
+    // MARK: Variables
+    /// place: Place - place's declaration
+    var place: Place
     
     // MARK: PlaceRow's view
     var body: some View {
@@ -29,8 +30,7 @@ struct PlaceRow: View {
             
             Spacer()
             
-            /// Shows a yellow ⭐️ (star) if the place is registered as a favorite one
-            if place.isFavorite {
+            if place.isFavorite { /// Shows a yellow ⭐️ (star) if the place is registered as a favorite one
                 Image(systemName: "star.fill")
                     .foregroundColor(.yellow)
             }
