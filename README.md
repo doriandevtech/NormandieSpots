@@ -1,6 +1,6 @@
 #  NormandieSpots
 
-## You want to visit a beautiful, joyfull and ressourcful french region ? Welcome to my app *NormandieSpots*, it will guide you everywhere 😉
+## You want to visit a beautiful, joyfull and resourceful french region ? Welcome to my app *NormandieSpots*, it will guide you everywhere 😉
 
 ### *NormandieSpots* lists places to go to (beaches 🏖️, cities 🏘️, countryside 🐄...) in the french region Normandie
 
@@ -47,7 +47,7 @@
 - v1.0.0-beta is now in the making... so keep in touch to discover it pretty soon ⌛️
 
 ## Next steps:
-- Create an App icon 🖼️ -> Done ✅ (v1 is out 👆🏻)
-- Add a 'Home' view 🏠 with categories -> In progress... ⏳
-- Use persisting datas 📊
-- Add UI and Unit tests ✅
+- Add a 'Home' view 🏠 with categories -> Done ✅
+- Use persisting datas 📊 -> In progress... ⏳
+- Ability to create new places 🆕 -> In progress... ⏳
+- Add UI and Unit tests ✅ -> Not started yet... 🔜
