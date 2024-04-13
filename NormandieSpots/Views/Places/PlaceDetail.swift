@@ -14,11 +14,13 @@ import SwiftUI /// Imports SwiftUI framework
 struct PlaceDetail: View {
     
     // MARK: Variables
-    /// Declares modelData as an instance of the data model ModelData in PlaceDetail
+    /// modelData: ModelData - Declares modelData as an EnvironmentObject
     @EnvironmentObject var modelData: ModelData
+
+    /// place: Place - place's declaration
     var place: Place
     
-    /// "placeIndex" compares the input place's id with the one in the model data
+    /// placeIndex: Int - compares the input place's id with the one in the model data
     var placeIndex: Int {
         modelData.places.firstIndex(where: { $0.id == place.id })!
     }
