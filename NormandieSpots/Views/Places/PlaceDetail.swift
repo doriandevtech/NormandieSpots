@@ -37,19 +37,19 @@ struct PlaceDetail: View {
                 .padding(.bottom, -130)
             
             VStack(alignment: .leading) {
-                HStack { /// "Place"'s name and isFavorite ⭐️ (star) button
+                HStack { 						/// "Place"'s name and isFavorite ⭐️ (star) button
                     Text(place.name)
                         .font(.title)
                     FavoriteButton(isSet: $modelData.places[placeIndex].isFavorite)
                 }
                 
-                Text(place.category.rawValue) /// "Place"'s category
+                Text(place.category.rawValue) 	/// "Place"'s category
                     .font(.subheadline)
                     .foregroundColor(.secondary)
                 
-                Divider() /// Separation line between the infos and description section
+                Divider() 						/// Separation line between the infos and description section
                 
-                Text("About \(place.name)") /// Place's name and description
+                Text("À propos de \(place.name)") 	/// "Place"'s name and description
                     .font(.title2)
                 Text(place.description)
             }
