@@ -5,11 +5,14 @@
 //  Created by Dorian Emenir on 04/04/2024.
 //
 
+// MARK: Imports
 import SwiftUI
 import CoreLocation
 
+// MARK: NewPlaceView
 struct NewPlaceView: View {
     
+    // MARk: Variables
     @State private var newPlace = Place.emptyPlace
     
     @Binding var places: [Place]
@@ -20,7 +23,7 @@ struct NewPlaceView: View {
     
     @State private var selectedCategory: Place.Category = .ville
     
-    
+    // MARK: NewPlaceView's view
     var body: some View {
         NavigationView {
             Form {
@@ -69,6 +72,7 @@ struct NewPlaceView: View {
     }
 }
 
+// Mark: Preview
 #Preview {
     NewPlaceView(places: .constant(Place.sampleData), isPresentingNewPlaceSheet: .constant(true))
 }
