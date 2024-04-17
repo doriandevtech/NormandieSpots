@@ -13,7 +13,7 @@ import SwiftUI /// Imports SwiftUI framework
 struct SettingsView: View {
     
     //    MARK: Variables
-    /// Bind the @State variable "setting" inside SettigsView
+    /// Bind the @State variable "setting" inside SettingsView
     @Binding var setting: Setting
     
     

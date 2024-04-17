@@ -21,7 +21,7 @@ struct PlaceRow: View {
     
     // MARK: PlaceRow's view
     var body: some View {
-        HStack { /// Shows the "place"'s image and it's name horizontaly
+        HStack { /// Shows the "place"'s image and it's name horizontally
             place.image
                 .resizable()
                 .frame(width: 50, height: 50)
