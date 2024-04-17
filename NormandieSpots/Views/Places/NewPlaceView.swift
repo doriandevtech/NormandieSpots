@@ -5,8 +5,10 @@
 //  Created by Dorian Emenir on 04/04/2024.
 //
 
+// MARK: Imports
 import SwiftUI
 
+// MARK: NewPlaceView
 struct NewPlaceView: View {
     
     /// newPlace: Place - State variable for the "empty place" variable
@@ -24,6 +26,7 @@ struct NewPlaceView: View {
     /// selectedCategory: Place.Category - State variable for the selected category inside the Picker( ) view
     @State private var selectedCategory: Place.Category = .ville
     
+    // MARK: NewPlaceView's view
     var body: some View {
         NavigationView {
             Form {
@@ -72,6 +75,7 @@ struct NewPlaceView: View {
     }
 }
 
+// Mark: Preview
 #Preview {
     NewPlaceView(places: .constant(Place.sampleData), isPresentingNewPlaceSheet: .constant(true))
 }
