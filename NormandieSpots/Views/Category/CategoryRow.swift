@@ -22,34 +22,18 @@ struct CategoryRow: View {
     
     // MARK: CategoryRow's View
     var body: some View {
-        
-        /// Groups the category's name and a ScrollView of the linked places
-        VStack(alignment: .leading) {
-            
-            /// Category's name
-            Text(categoryName)
+        VStack(alignment: .leading) { /// Groups the category's name and a ScrollView of the linked places
+            Text(categoryName)      /// Category's name
                 .font(.title3)
                 .padding()
             
-            /// ScrollView of the places inside this category
-            ScrollView(.horizontal, showsIndicators: false) {
-                
-                /// Contains a NavigationLink to a given place detailed informations
-                HStack(alignment: .top, spacing: 0) {
-                    
-                    ForEach(placesList) { place in
-                        
-                        /// NavigationLink directing to a places informations
-                        NavigationLink {
-                            
-                            /// Opens PlaceDetail view for the given place
-                            PlaceDetail(place: place)
-                            
+            ScrollView(.horizontal, showsIndicators: false) { /// ScrollView of the places inside this category
+                HStack(alignment: .top, spacing: 0) {   /// Contains a NavigationLink to a given place detailed informations
+                    ForEach(placesList) { place in      /// For each place (named: "place") from placesList
+                        NavigationLink {                /// NavigationLink directing to a places informations
+                            PlaceDetail(place: place)   /// Re-directs to PlaceDetail( ) view for the given place
                         } label: {
-                            
-                            /// Shows the CategoryItem view for the given place
-                            CategoryItem(place: place)
-                            
+                            CategoryItem(place: place)  /// Shows the CategoryItem view for the given place
                         }
                     }
                 }

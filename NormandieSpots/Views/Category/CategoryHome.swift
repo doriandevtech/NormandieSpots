@@ -16,7 +16,6 @@ struct CategoryHome: View {
     /// modelData: ModelData - Declares modelData as an EnvironmentObject
     @EnvironmentObject var modelData: ModelData
     
-    
     // MARK: CategoryHome's view
     /// body: View - contains a NavigationSplitView of a featured place's image and a row for each category
     var body: some View {
@@ -28,8 +27,8 @@ struct CategoryHome: View {
                 }
                 .listRowInsets(EdgeInsets())
             }
-            .listStyle(.inset) /// Adds list style
-            .navigationTitle("Accueil") /// Adds title to the List
+            .listStyle(.inset)
+            .navigationTitle("Accueil")
         } detail: {
             Text("Choisissez un lieu")
         }

@@ -9,16 +9,18 @@
 import SwiftUI /// Imports SwiftUI framework
 
 // MARK: PlaceDetail
-/// Main aspect :  PlaceDetail shows the details of a selected place (Location, Image, Description, Country...)
+/// Main aspect : PlaceDetail shows the details of a selected place (Location, Image, Description, Country...)
 /// sub aspects : A place can also be made "favorite" or taken out from this list in this view
 struct PlaceDetail: View {
     
     // MARK: Variables
-    /// Declares modelData as an instance of the data model ModelData in PlaceDetail
+    /// modelData: ModelData - Declares modelData as an EnvironmentObject
     @EnvironmentObject var modelData: ModelData
+
+    /// place: Place - "place"'s declaration
     var place: Place
     
-    /// "placeIndex" compares the input place's id with the one in the model data
+    /// placeIndex: Int - compares the input "place"'s id with the one in the model data
     var placeIndex: Int {
         modelData.places.firstIndex(where: { $0.id == place.id })!
     }
@@ -26,34 +28,28 @@ struct PlaceDetail: View {
     // MARK: PlaceDetail's view
     var body: some View {
         ScrollView {
-///            Configure the map view of the selected place
-            MapView(coordinate: place.locationCoordinate)
+            MapView(coordinate: place.locationCoordinate) /// Configures the map view of the selected "place"
                 .ignoresSafeArea(edges: .top)
                 .frame(height: 300)
             
-///            Shows the selected place's image
-            CircleImage(image: place.image)
+            CircleImage(image: place.image) /// "Place"'s image disposal
                 .offset(y: -100)
                 .padding(.bottom, -130)
             
             VStack(alignment: .leading) {
-///                This HStack shows the place's name and isFavorite ⭐️ (star) button
-                HStack {
+                HStack { 						/// "Place"'s name and isFavorite ⭐️ (star) button
                     Text(place.name)
                         .font(.title)
                     FavoriteButton(isSet: $modelData.places[placeIndex].isFavorite)
                 }
                 
-///                Shows the place's category
-                Text(place.category.rawValue)
+                Text(place.category.rawValue) 	/// "Place"'s category
                     .font(.subheadline)
                     .foregroundColor(.secondary)
                 
-///                Adds a light separation line between the infos and description section
-                Divider()
+                Divider() 						/// Separation line between the infos and description section
                 
-///                Shows the place's name and description
-                Text("About \(place.name)")
+                Text("À propos de \(place.name)") 	/// "Place"'s name and description
                     .font(.title2)
                 Text(place.description)
             }
