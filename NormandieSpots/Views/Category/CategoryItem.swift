@@ -9,7 +9,7 @@
 import SwiftUI /// Imports SwiftUI framework
 
 // MARK: CategoryItem
-/// Main aspect: CategoryItem contains a VStack of a given place's image and a HStack with its name and isFavorite value
+/// CategoryItem: View - contains a VStack of a given place's image and a HStack with its name and isFavorite value
 struct CategoryItem: View {
     
     // MARK: Variables
@@ -20,16 +20,14 @@ struct CategoryItem: View {
     /// body: View - contains a VStack of the place's image and a HStack with its name and isFavorite value
     var body: some View {
         VStack(alignment: .leading) {
-            /// Place's image
-            place.image
+            place.image /// Place's image
                 .renderingMode(.original)
                 .resizable()
                 .frame(width: 150, height: 150)
                 .clipShape(RoundedRectangle(cornerRadius: 10))
                 .shadow(radius: 2)
                 
-            /// Contains the place's name and its isFavorite value
-            HStack {
+            HStack { /// Contains the place's name and its isFavorite value
                 Text(place.name)
                     .foregroundStyle(.primary)
                 .font(.caption)
