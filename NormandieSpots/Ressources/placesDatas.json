@@ -95,7 +95,7 @@
             "longitude": 0.265858
         },
         "description": "Criquetot-l'Esneval est une commune française située dans le département de la Seine-Maritime en région Normandie.",
-        "imageName": "etretat"
+        "imageName": "criquetot"
     },
     {
         "name": "Bolbec",
@@ -109,7 +109,7 @@
             "longitude": 0.473702
         },
         "description": "Bolbec est une commune française, située dans le département de la Seine-Maritime en région Normandie.",
-        "imageName": "etretat"
+        "imageName": "bolbec"
     },
     {
         "name": "Le Mont Saint-Michel",
@@ -123,7 +123,7 @@
             "longitude": -1.509950
         },
         "description": "Le Mont-Saint-Michel est une commune française située dans la Manche en Normandie. Elle tire son nom de l'îlot rocheux consacré à saint Michel où s’élève aujourd’hui l’abbaye du Mont-Saint-Michel.",
-        "imageName": "etretat"
+        "imageName": "montSaintMichel"
     },
     {
         "name": "Le Mont Saint-Michel",
@@ -137,7 +137,7 @@
             "longitude": -1.509950
         },
         "description": "Le Mont-Saint-Michel est une commune française située dans la Manche en Normandie. Elle tire son nom de l'îlot rocheux consacré à saint Michel où s’élève aujourd’hui l’abbaye du Mont-Saint-Michel.",
-        "imageName": "etretat"
+        "imageName": "montSaintMichel"
     },
     {
         "name": "Le Mont Saint-Michel",
@@ -151,7 +151,7 @@
             "longitude": -1.509950
         },
         "description": "Le Mont-Saint-Michel est une commune française située dans la Manche en Normandie. Elle tire son nom de l'îlot rocheux consacré à saint Michel où s’élève aujourd’hui l’abbaye du Mont-Saint-Michel.",
-        "imageName": "etretat"
+        "imageName": "montSaintMichel"
     },
     {
         "name": "Le Mont Saint-Michel",
@@ -165,21 +165,21 @@
             "longitude": -1.509950
         },
         "description": "Le Mont-Saint-Michel est une commune française située dans la Manche en Normandie. Elle tire son nom de l'îlot rocheux consacré à saint Michel où s’élève aujourd’hui l’abbaye du Mont-Saint-Michel.",
-        "imageName": "etretat"
+        "imageName": "montSaintMichel"
     },
     {
-        "name": "Le Mont Saint-Michel",
+        "name": "Arromanches",
         "category": "Monument",
         "country": "France",
-        "id": 1009,
+        "id": 1013,
         "isFavorite": true,
         "isFeatured": false,
         "coordinates": {
             "latitude": 48.636081,
             "longitude": -1.509950
         },
-        "description": "Le Mont-Saint-Michel est une commune française située dans la Manche en Normandie. Elle tire son nom de l'îlot rocheux consacré à saint Michel où s’élève aujourd’hui l’abbaye du Mont-Saint-Michel.",
-        "imageName": "etretat"
+        "description": "Arromanches-les-Bains, couramment appelée Arromanches, est une commune française, située dans le département du Calvados en région Normandie. Arromanches est restée célèbre comme étant un des lieux historiques du débarquement de Normandie (nom de code : opération Neptune), notamment pour le port artificiel qui y fut installé. Ce port permit de débarquer de 9 000 à 22 000 tonnes de matériel par jour, lors de la bataille de Caen.",
+        "imageName": "arromanches"
     },
     {
         "name": "Deauville",
@@ -193,7 +193,7 @@
             "longitude": 0.074669
         },
         "description": "Hermeville est une commune française située dans le département de la Seine-Maritime en région Normandie.",
-        "imageName": "etretat"
+        "imageName": "deauville"
     },
     {
         "name": "Trouville-sur-Mer",
@@ -207,7 +207,7 @@
             "longitude": 0.081757
         },
         "description": "Trouville-sur-Mer est une commune française, située dans le département du Calvados en Normandie, sa population s'élève à 4 603 habitants.",
-        "imageName": "etretat"
+        "imageName": "trouville"
     },
     {
         "name": "Cabourg",
