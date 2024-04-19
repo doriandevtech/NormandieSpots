@@ -8,6 +8,9 @@
 - Open Source project => Feel free to contribute and react to it !
 
 ### Language:
+- Swift
+
+### Framework:
 - SwiftUI
 
 ### Swift principles used:
@@ -46,11 +49,9 @@
 <img width="190" alt="Capture d’écran 2024-04-14 à 4 34 59 PM" src="https://github.com/doriandevtech/NormandieSpots/assets/61510923/f1362cd9-57c6-4c9c-8dcb-71c7a5f4d23a">
 
 ## Next version:
-- v1.0.0-beta is done ✅
 - v1.1 is in progress... ⏳
 
-## Next steps:
-- Add a 'Home' view 🏠 with categories -> Done ✅
+## Next steps - v1.1:
 - Use persisting datas 📊 -> In progress... ⏳
 - Ability to create new places 🆕 -> In progress... ⏳
 - Add UI and Unit tests ✅ -> Not started yet... 🔜
