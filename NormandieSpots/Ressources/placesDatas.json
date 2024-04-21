@@ -126,57 +126,15 @@
         "imageName": "montSaintMichel"
     },
     {
-        "name": "Le Mont Saint-Michel",
-        "category": "Monument",
-        "country": "France",
-        "id": 1009,
-        "isFavorite": true,
-        "isFeatured": false,
-        "coordinates": {
-            "latitude": 48.636081,
-            "longitude": -1.509950
-        },
-        "description": "Le Mont-Saint-Michel est une commune française située dans la Manche en Normandie. Elle tire son nom de l'îlot rocheux consacré à saint Michel où s’élève aujourd’hui l’abbaye du Mont-Saint-Michel.",
-        "imageName": "montSaintMichel"
-    },
-    {
-        "name": "Le Mont Saint-Michel",
-        "category": "Monument",
-        "country": "France",
-        "id": 1009,
-        "isFavorite": true,
-        "isFeatured": false,
-        "coordinates": {
-            "latitude": 48.636081,
-            "longitude": -1.509950
-        },
-        "description": "Le Mont-Saint-Michel est une commune française située dans la Manche en Normandie. Elle tire son nom de l'îlot rocheux consacré à saint Michel où s’élève aujourd’hui l’abbaye du Mont-Saint-Michel.",
-        "imageName": "montSaintMichel"
-    },
-    {
-        "name": "Le Mont Saint-Michel",
-        "category": "Monument",
-        "country": "France",
-        "id": 1009,
-        "isFavorite": true,
-        "isFeatured": false,
-        "coordinates": {
-            "latitude": 48.636081,
-            "longitude": -1.509950
-        },
-        "description": "Le Mont-Saint-Michel est une commune française située dans la Manche en Normandie. Elle tire son nom de l'îlot rocheux consacré à saint Michel où s’élève aujourd’hui l’abbaye du Mont-Saint-Michel.",
-        "imageName": "montSaintMichel"
-    },
-    {
         "name": "Arromanches",
         "category": "Monument",
         "country": "France",
-        "id": 1013,
+        "id": 1010,
         "isFavorite": true,
         "isFeatured": false,
         "coordinates": {
-            "latitude": 48.636081,
-            "longitude": -1.509950
+            "latitude": 49.339069,
+            "longitude": -0.622152
         },
         "description": "Arromanches-les-Bains, couramment appelée Arromanches, est une commune française, située dans le département du Calvados en région Normandie. Arromanches est restée célèbre comme étant un des lieux historiques du débarquement de Normandie (nom de code : opération Neptune), notamment pour le port artificiel qui y fut installé. Ce port permit de débarquer de 9 000 à 22 000 tonnes de matériel par jour, lors de la bataille de Caen.",
         "imageName": "arromanches"
@@ -185,7 +143,7 @@
         "name": "Deauville",
         "category": "Ville",
         "country": "France",
-        "id": 1010,
+        "id": 1011,
         "isFavorite": true,
         "isFeatured": false,
         "coordinates": {
@@ -199,7 +157,7 @@
         "name": "Trouville-sur-Mer",
         "category": "Ville",
         "country": "France",
-        "id": 1011,
+        "id": 1012,
         "isFavorite": false,
         "isFeatured": false,
         "coordinates": {
@@ -213,7 +171,7 @@
         "name": "Cabourg",
         "category": "Ville",
         "country": "France",
-        "id": 1012,
+        "id": 1013,
         "isFavorite": true,
         "isFeatured": false,
         "coordinates": {
@@ -222,5 +180,47 @@
         },
         "description": "Cabourg est une commune française située dans le département du Calvados, région Normandie.",
         "imageName": "etretat"
+    },
+    {
+        "name": "Cimetière Américain de Normandie",
+        "category": "Monument",
+        "country": "France",
+        "id": 1014,
+        "isFavorite": false,
+        "isFeatured": false,
+        "coordinates": {
+            "latitude": 49.359293,
+            "longitude": -0.855573
+        },
+        "description": "Le cimetière américain de Colleville-sur-Mer est un cimetière militaire américain situé juste au-dessus d’une des plages du débarquement nommée Omaha Beach par les Alliés, dans la commune française de Colleville-sur-Mer sur l'un des sites du débarquement allié du 6 juin 1944.",
+        "imageName": "cimetiereAmericain"
+    },
+    {
+        "name": "Cathédrale Notre-Dame de Rouen",
+        "category": "Monument",
+        "country": "France",
+        "id": 1015,
+        "isFavorite": false,
+        "isFeatured": false,
+        "coordinates": {
+            "latitude": 49.440300,
+            "longitude": 1.095023
+        },
+        "description": "La cathédrale Notre-Dame, officiellement cathédrale primatiale Notre-Dame-de-l'Assomption de Rouen, est le monument le plus prestigieux de la ville de Rouen.",
+        "imageName": "notreDameRouen"
+    },
+    {
+        "name": "Omaha Beach",
+        "category": "Monument",
+        "country": "France",
+        "id": 1016,
+        "isFavorite": false,
+        "isFeatured": false,
+        "coordinates": {
+            "latitude": 49.360370,
+            "longitude": -0.841924
+        },
+        "description": "Omaha Beach est l'appellation utilisée par les Alliés pendant la Seconde Guerre mondiale pour désigner l'une des cinq plages du débarquement de Normandie. Affectée aux troupes américaines, elle est celle où les Alliés perdirent le plus de troupes, ce qui lui a valu le surnom de « bloody Omaha ».",
+        "imageName": "omahaBeach"
     }
 ]
