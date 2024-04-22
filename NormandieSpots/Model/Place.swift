@@ -6,9 +6,9 @@
 //
 
 // MARK: Imports
-import Foundation /// Imports Foundation
-import SwiftUI /// Imports SwiftUI framework
-import CoreLocation /// Imports CoreLocation
+import Foundation
+import SwiftUI
+import CoreLocation
 
 // MARK: Place
 /// Defines properties and structures for a given 'Place'
@@ -23,6 +23,7 @@ struct Place: Hashable, Codable, Identifiable {
     var isFeatured: Bool /// `id`: Bool - Place's `isFeatured` attribute
     var category: Category /// `id`: Category - Place's catgeory
     
+    /// Place's initialization
     init(id: Int, name: String, country: String, description: String, isFavorite: Bool, isFeatured: Bool, category: Category, imageName: String, coordinates: Coordinates) {
         self.id = id
         self.name = name
@@ -65,12 +66,14 @@ struct Place: Hashable, Codable, Identifiable {
 }
 
 extension Place {
+    /// emptyPlace: Place - an empty Place's declaration
     static var emptyPlace: Place {
         Place(id: 0, name: "", country: "", description: "", isFavorite: false, isFeatured: false, category: Category.commune, imageName: "", coordinates: Coordinates(latitude: 1.0, longitude: 1.0))
     }
 }
 
 extension Place {
+    /// sampleData: [Place] - a list of pre recorded Places used as examples during build time
     static var sampleData: [Place] {
         [
             Place(id: 1, name: "Name", country: "Country", description: "Description", isFavorite: true, isFeatured: true, category: Category.ville, imageName: "", coordinates: Coordinates(latitude: 0.0, longitude: 0.0))
