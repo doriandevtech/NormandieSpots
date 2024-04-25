@@ -1,8 +1,6 @@
 #  NormandieSpots 🥾🧭🧳
 
-## Welcome to my app *NormandieSpots*, it will guide you everywhere 😉
-
-### *NormandieSpots* lists places to go to (beaches 🏖️, cities 🏘️, countryside 🐄...) in the french region Normandie
+## *NormandieSpots* lists places to go to (beaches 🏖️, cities 🏘️, countryside 🐄...) in the french region Normandie
 
 ### Project type:
 - Open Source project => Feel free to contribute and react to it !
