@@ -31,8 +31,6 @@ struct CircleImage: View {
 }
 
 // MARK: Preview
-struct CircleImage_Preview: PreviewProvider {
-    static var previews: some View {
-        CircleImage(image: Image("etretat"))
-    }
+#Preview {
+    CircleImage(image: Image("etretat"))
 }
