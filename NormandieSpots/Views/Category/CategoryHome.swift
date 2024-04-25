@@ -6,7 +6,7 @@
 //
 
 // MARK: Imports
-import SwiftUI /// Imports SwiftUI framework
+import SwiftUI
 
 // MARK: CategoryHome
 /// Main aspect: displays a NavigationSplitView of a featured place's image and a row for each category

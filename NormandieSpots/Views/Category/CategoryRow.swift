@@ -6,7 +6,7 @@
 //
 
 // MARK: Imports
-import SwiftUI /// Imports SwiftUI framework
+import SwiftUI
 
 // MARK: CategoryRow
 /// Main aspect: CategoryRow shows the list of a places for s given category
@@ -25,7 +25,7 @@ struct CategoryRow: View {
         VStack(alignment: .leading) { /// Groups the category's name and a ScrollView of the linked places
             Text(categoryName)      /// Category's name
                 .font(.title3)
-                .padding()
+                .padding(.init(top: 10, leading: 20, bottom: -5, trailing: 10))
             
             ScrollView(.horizontal, showsIndicators: false) { /// ScrollView of the places inside this category
                 HStack(alignment: .top, spacing: 0) {   /// Contains a NavigationLink to a given place detailed informations

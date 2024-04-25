@@ -6,7 +6,7 @@
 //
 
 // MARK: Imports
-import SwiftUI /// Imports SwiftUI framework
+import SwiftUI
 
 // MARK: PlaceDetail
 /// Main aspect : PlaceDetail shows the details of a selected place (Location, Image, Description, Country...)

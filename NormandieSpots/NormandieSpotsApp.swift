@@ -6,7 +6,7 @@
 //
 
 // MARK: Imports
-import SwiftUI /// Imports SwiftUI framework
+import SwiftUI
 
 @main /// @main - defines the entry point of the NormandieSpotsApp
 struct NormandieSpotsApp: App {
