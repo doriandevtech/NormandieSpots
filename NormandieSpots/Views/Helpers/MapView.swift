@@ -6,8 +6,8 @@
 //
 
 // MARK: Imports
-import SwiftUI /// Imports SwiftUI framework
-import MapKit /// Imports MapKit framework
+import SwiftUI
+import MapKit
 
 // MARK: MapView
 /// Configures the map displayed for the PlaceDetail view

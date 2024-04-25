@@ -6,7 +6,7 @@
 //
 
 // MARK: Imports
-import SwiftUI /// Imports SwiftUI framework
+import SwiftUI
 
 // MARK: FavoriteButton
 /// The button is toggled when clicked and its value goes from a yellow ⭐️ (filled star) to an empty grey ⭐️ (star)

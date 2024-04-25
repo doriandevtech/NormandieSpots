@@ -6,7 +6,7 @@
 //
 
 // MARK: Imports
-import SwiftUI /// Import SwiftUI framework
+import SwiftUI
 
 // MARK: PlaceRow
 /// Main aspect : PlaceRow defines a lonely item

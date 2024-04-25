@@ -6,7 +6,7 @@
 //
 
 // MARK: Imports
-import SwiftUI /// Imports SwiftUI framework
+import SwiftUI
 
 // MARK: CategoryItem
 /// CategoryItem: View - contains a VStack of a given place's image and a HStack with its name and isFavorite value

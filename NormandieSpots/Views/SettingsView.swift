@@ -6,7 +6,7 @@
 //
 
 // MARK: Imports
-import SwiftUI /// Imports SwiftUI framework
+import SwiftUI
 
 // MARK: SettingsView
 /// Main aspect: SettingsView shows a list of settings to configure the app

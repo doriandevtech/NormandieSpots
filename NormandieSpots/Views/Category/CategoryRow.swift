@@ -6,7 +6,7 @@
 //
 
 // MARK: Imports
-import SwiftUI /// Imports SwiftUI framework
+import SwiftUI
 
 // MARK: CategoryRow
 /// Main aspect: CategoryRow shows the list of a places for s given category

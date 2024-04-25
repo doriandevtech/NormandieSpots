@@ -6,7 +6,7 @@
 //
 
 // MARK: Imports
-import SwiftUI /// Import SwiftUI framework
+import SwiftUI
 
 // MARK: PlacesList
 /// Main aspect :  PlaceList configures a list of places

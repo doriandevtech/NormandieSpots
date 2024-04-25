@@ -6,8 +6,8 @@
 //
 
 // MARK: Imports
-import Foundation /// Imports Foundation
-import Combine /// Imports Combine
+import Foundation
+import Combine
 
 // MARK: ModelData
 /// Defines the Data Model of the app
