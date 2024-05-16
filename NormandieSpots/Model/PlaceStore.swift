@@ -14,4 +14,10 @@ class PlaceStore: ObservableObject {
         try FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
             .appendingPathComponent("places.data")
     }
+    
+    func load() async throws {
+        let task = Task<[PlaceList], Error>{
+            let fileURL = try Self.fileURL()
+        }
+    }
 }
