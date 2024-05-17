@@ -28,4 +28,13 @@ class PlaceStore: ObservableObject {
         let places = try await task.value
         self.places = places
     }
+    
+    func save(places: [Place]) async throws {
+        let task = Task {
+            let data = try JSONEncoder().encode(places)
+            let outfile = try Self.fileURL()
+            try data.write(to: outfile)
+        }
+        _ = try await task.value
+    }
 }
