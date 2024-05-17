@@ -5,10 +5,11 @@
 //  Created by Dorian Emenir on 14/05/2024.
 //
 
-import Foundation
+import SwiftUI
 
+@MainActor
 class PlaceStore: ObservableObject {
-    @Published var places: [PlaceList] = []
+    @Published var places: [Place] = []
     
     private static func fileURL() throws -> URL {
         try FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
@@ -16,8 +17,15 @@ class PlaceStore: ObservableObject {
     }
     
     func load() async throws {
-        let task = Task<[PlaceList], Error>{
+        let task = Task<[Place], Error>{
             let fileURL = try Self.fileURL()
+            guard let data = try? Data(contentsOf: fileURL) else {
+                return []
+            }
+            let placesList = try JSONDecoder().decode([Place].self, from: data)
+            return placesList
         }
+        let places = try await task.value
+        self.places = places
     }
 }
