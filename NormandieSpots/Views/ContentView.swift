@@ -15,6 +15,10 @@ struct ContentView: View {
     @State private var selection: Tab = .home /// selection: Tab - "Home" view as the default view at app lauch
     
     @Binding var places: [Place]
+    
+    @Environment(\.scenePhase) private var scenePhase
+    
+    let saveAction: ()->Void
         
     /// Enum "Tab" contains the list of tabs
     enum Tab {
@@ -40,13 +44,16 @@ struct ContentView: View {
                 }
                 .tag(Tab.list) /// PlaceList - tab "list" link
         }
+        .onChange(of: scenePhase) { phase in
+            if phase == .inactive { saveAction() }
+        }
     }
 }
 
 // MARK: Preview
 struct ContentView_Preview: PreviewProvider {
     static var previews: some View {
-        ContentView(places: .constant(Place.sampleData))
+        ContentView(places: .constant(Place.sampleData), saveAction: {})
             .environmentObject(ModelData())
     }
 }
