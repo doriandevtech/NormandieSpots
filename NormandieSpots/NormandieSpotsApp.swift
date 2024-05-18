@@ -14,18 +14,26 @@ struct NormandieSpotsApp: App {
     /// @State attribute initializes a model object the same way you use it to initialize properties inside a view
     @StateObject private var modelData = ModelData()
     @StateObject private var store = PlaceStore()
-        
+    
     var body: some Scene {
         WindowGroup {
-            ContentView(places: $store.places)
-                .environmentObject(modelData)
-                .task {
+            ContentView(places: $store.places) {
+                Task {
                     do {
-                        try await store.load()
+                        try await store.save(places: store.places)
                     } catch {
                         fatalError(error.localizedDescription)
                     }
                 }
+            }
+            .task {
+                do {
+                    try await store.load()
+                } catch {
+                    fatalError(error.localizedDescription)
+                }
+            }
+            .environmentObject(modelData)
         }
     }
 }
