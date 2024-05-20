@@ -14,6 +14,9 @@ struct NewPlaceView: View {
     /// newPlace: Place - State variable for the "empty place" variable
     @State private var newPlace = Place.emptyPlace
     
+    /// modelData: ModelData - Declares modelData as an EnvironmentObject
+    @EnvironmentObject var modelData: ModelData
+    
     /// places: [Places] - Binding to the list of places
     @Binding var places: [Place]
     
@@ -65,10 +68,10 @@ struct NewPlaceView: View {
                 }
                 ToolbarItem(placement: .confirmationAction) {
                     Button("Ajouter") {
-                        places.append(newPlace)
+                        modelData.places.append(newPlace)
                         isPresentingNewPlaceSheet = false
                     }
-                    .disabled(isAddButtonEnabled)
+//                    .disabled(isAddButtonEnabled)
                 }
             }
         }
