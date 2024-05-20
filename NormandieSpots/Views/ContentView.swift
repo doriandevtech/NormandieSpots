@@ -12,14 +12,14 @@ import SwiftUI
 struct ContentView: View {
     
     // MARK: Variables
-    @State private var selection: Tab = .home /// selection: Tab - "Home" view as the default view at app lauch
+    @State private var selection: Tab = .home /// selection: Tab - "Home" view as the default view at app launch
     
     @Binding var places: [Place]
     
     @Environment(\.scenePhase) private var scenePhase
     
     let saveAction: ()->Void
-        
+    
     /// Enum "Tab" contains the list of tabs
     enum Tab {
         case home
@@ -39,13 +39,13 @@ struct ContentView: View {
             
             /// PlaceList view - "list" tabItem
             PlaceList(places: $places)
-                .tabItem { /// PlaceList - tabItem's content
-                    Label("Lieux", systemImage: "list.bullet")
-                }
-                .tag(Tab.list) /// PlaceList - tab "list" link
-        }
-        .onChange(of: scenePhase) { phase in
-            if phase == .inactive { saveAction() }
+            .tabItem { /// PlaceList - tabItem's content
+                Label("Lieux", systemImage: "list.bullet")
+            }
+            .tag(Tab.list) /// PlaceList - tab "list" link
+            .onChange(of: scenePhase) { phase in /// Triggers `saveAction()` if `phase` in `inactive`
+                if phase == .inactive { saveAction() }
+            }
         }
     }
 }
