@@ -16,6 +16,7 @@ class PlaceStore: ObservableObject {
             .appendingPathComponent("places.data")
     }
     
+    /// load() - loads the datas from a given file
     func load() async throws {
         let task = Task<[Place], Error>{
             let fileURL = try Self.fileURL()
@@ -29,6 +30,7 @@ class PlaceStore: ObservableObject {
         self.places = places
     }
     
+    /// save(places: [Place]) - saves data to a given file
     func save(places: [Place]) async throws {
         let task = Task {
             let data = try JSONEncoder().encode(places)
