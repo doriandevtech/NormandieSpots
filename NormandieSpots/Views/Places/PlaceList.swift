@@ -9,28 +9,27 @@
 import SwiftUI
 
 // MARK: PlacesList
-/// Main aspect :  PlaceList configures a list of places
-/// sub aspects : PlaceList can filter places using there "isFavorite" attribute
+/// Main aspect :  `PlaceList` configures a list of `places`
+/// sub aspects : PlaceList can filter places using there isFavorite` attribute
 struct PlaceList: View {
     
     // MARK: Variables
-    /// modelData: ModelData - Declares modelData as an EnvironmentObject
+    /// `modelData`: ModelData - Declares `modelData as an EnvironmentObject
     @EnvironmentObject var modelData: ModelData
 
-    /// showFavOnly: Bool - State variable for the "Show favorite" toggle
+    /// `showFavOnly`: Bool - State variable for the "Show favorite" toggle
     @State private var showFavOnly = false
     
-    /// showDeleteAlert: Bool - State variable for the "Delete alert" popup
+    /// `showDeleteAlert`: Bool - State variable for the "Delete alert" popup
     @State private var showDeleteAlert = false
     
-    /// isPresentingNewSpotView: Bool - State variable for the showing of NewPlaceView( ) view
+    /// `isPresentingNewSpotView`: Bool - State variable for the showing of NewPlaceView( ) view
     @State private var isPresentingNewSpotView = false
     
-    /// places: [Places] - Binding to the list of places
+    /// `places`: [Places] - Binding to the list of places
     @Binding var places: [Place]
     
-    /// filteredPlaces: [Place] - filters the favorite places from the list of places
-    /// shows only favorite places when "Show favorite" toggle is on
+    /// `filteredPlaces`: [Place] - filters the favorite places from the list of places shows only favorite places when "Show favorite" toggle is on
     var filteredPlaces: [Place] {
         modelData.places.filter { place in
             (!showFavOnly || place.isFavorite)
@@ -41,11 +40,11 @@ struct PlaceList: View {
     var body: some View {
         NavigationView {
             List {
-                Toggle(isOn: $showFavOnly, label: { /// Adds a isFavorite toggle item
+                Toggle(isOn: $showFavOnly, label: { /// Adds a `isFavorite` toggle item
                     Text("Favoris")
                 })
                 
-                ForEach(filteredPlaces) { place in  /// Each place has a link from PlaceRow( ) redirecting to its PlaceDetail( ) view
+                ForEach(filteredPlaces) { place in  /// Each `place has a link from `PlaceRow()` redirecting to its `PlaceDetail()` view
                     NavigationLink {
                         PlaceDetail(place: place)
                     } label: {
@@ -81,7 +80,7 @@ struct PlaceList: View {
                     }
                 )
             }
-            .toolbar {                              /// "+" button toggling the NewPlaceView( ) when pressed
+            .toolbar {                              /// "+" button toggling the `NewPlaceView()` when pressed
                 Button(action: {
                     isPresentingNewSpotView = true
                 }) {
@@ -90,7 +89,10 @@ struct PlaceList: View {
                 .accessibilityLabel("Ajout d'un nouveau lieu")
             }
             .sheet(isPresented: $isPresentingNewSpotView) {
-                NewPlaceView(places: $places, isPresentingNewPlaceSheet: $isPresentingNewSpotView)
+                NewPlaceView(
+                    places: $places,
+                    isPresentingNewPlaceSheet: $isPresentingNewSpotView
+                )
             }
         }
     }

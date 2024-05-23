@@ -13,27 +13,27 @@ import SwiftUI
 struct CategoryRow: View {
     
     // MARK: Variables
-    /// categoryName: String - Category's name
+    /// `categoryName`: String - Category's name
     var categoryName: String
-    /// placesList: [Place] - List of places
+    /// `placesList`: [Place] - List of places
     var placesList: [Place]
-    /// places: [Place] - List of places
+    /// `places`: [Place] - List of places
     var places = ModelData().places
     
     // MARK: CategoryRow's View
     var body: some View {
-        VStack(alignment: .leading) { /// Groups the category's name and a ScrollView of the linked places
-            Text(categoryName)      /// Category's name
+        VStack(alignment: .leading) {   /// Groups the category's name and a ScrollView of the linked places
+            Text(categoryName)          /// Category's name
                 .font(.title3)
                 .padding(.init(top: 10, leading: 20, bottom: -5, trailing: 10))
             
             ScrollView(.horizontal, showsIndicators: false) { /// ScrollView of the places inside this category
-                HStack(alignment: .top, spacing: 0) {   /// Contains a NavigationLink to a given place detailed informations
-                    ForEach(placesList) { place in      /// For each place (named: "place") from placesList
-                        NavigationLink {                /// NavigationLink directing to a places informations
-                            PlaceDetail(place: place)   /// Re-directs to PlaceDetail( ) view for the given place
+                HStack(alignment: .top, spacing: 0) {       /// Contains a NavigationLink to a given place detailed informations
+                    ForEach(placesList) { place in          /// For each place (named: "place") from placesList
+                        NavigationLink {                    /// NavigationLink directing to a places informations
+                            PlaceDetail(place: place)       /// Re-directs to PlaceDetail( ) view for the given place
                         } label: {
-                            CategoryItem(place: place)  /// Shows the CategoryItem view for the given place
+                            CategoryItem(place: place)      /// Shows the CategoryItem view for the given place
                         }
                     }
                 }

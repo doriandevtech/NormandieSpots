@@ -16,7 +16,7 @@ import SwiftUI
 struct PlaceRow: View {
     
     // MARK: Variables
-    /// place: Place - place's declaration
+    /// `place`: Place - place's declaration
     var place: Place
     
     // MARK: PlaceRow's view

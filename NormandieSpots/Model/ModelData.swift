@@ -14,7 +14,7 @@ import Combine
 final class ModelData: ObservableObject {
     
     // MARK: Variables
-    /// `places`: [Place] - Array of landmarks initialized from landmarkData.json
+    /// `places`: [Place] - Array of `places` initialized from "placesDatas.json"
     @Published var places: [Place] = load("placesDatas.json")
     
     /// `features`: [Place] - filters the favorite places

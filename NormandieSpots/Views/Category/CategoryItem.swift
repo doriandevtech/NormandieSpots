@@ -13,11 +13,11 @@ import SwiftUI
 struct CategoryItem: View {
     
     // MARK: Variables
-    /// place: Place - place's declaration
+    /// `place`: Place - place's declaration
     var place: Place
     
     // MARK: CategoryItem's view
-    /// body: View - contains a VStack of the place's image and a HStack with its name and isFavorite value
+    /// body: View - contains a VStack of the place's image and a HStack with its name and `isFavorite` value
     var body: some View {
         VStack(alignment: .leading) {
             place.image /// Place's image
