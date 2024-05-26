@@ -40,7 +40,7 @@ struct NewPlaceView: View {
                     TextField("Nom du pays", text: $newPlace.country)
                 }
                 Section("Quel est le type de lieu ?") {
-                    Picker(selection: $selectedCategory, label: Text("Catégorie")) {
+                    Picker(selection: $selectedCategory, label: Text("Catégorie")) { /// Picker view to select the place's category
                         Text("Ville").tag(Place.Category.ville)
                         Text("Monument").tag(Place.Category.monument)
                         Text("Commune").tag(Place.Category.commune)
