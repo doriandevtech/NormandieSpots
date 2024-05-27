@@ -1,4 +1,4 @@
-#  NormandieSpots 🥾🧭🧳
+#  NormandieSpots 🥾🧭
 
 ## *NormandieSpots* lists places to go to (beaches 🏖️, cities 🏘️, countryside 🐄...) in the french region Normandie
 
