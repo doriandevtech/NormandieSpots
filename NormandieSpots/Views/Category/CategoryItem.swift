@@ -20,7 +20,7 @@ struct CategoryItem: View {
     /// body: View - contains a VStack of the place's image and a HStack with its name and `isFavorite` value
     var body: some View {
         VStack(alignment: .leading) {
-            place.image /// Place's image
+            place.image /// `place` image
                 .renderingMode(.original)
                 .resizable()
                 .frame(width: 150, height: 150)
