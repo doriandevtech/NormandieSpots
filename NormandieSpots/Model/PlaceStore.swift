@@ -5,6 +5,7 @@
 //  Created by Dorian Emenir on 14/05/2024.
 //
 
+// MARK: Imports
 import SwiftUI
 
 @MainActor // Make the `PlaceStore` class as the starting point of the app NormandieSpots
