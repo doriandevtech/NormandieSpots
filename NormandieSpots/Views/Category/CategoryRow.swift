@@ -29,7 +29,7 @@ struct CategoryRow: View {
             
             ScrollView(.horizontal, showsIndicators: false) { /// ScrollView of the places inside this category
                 HStack(alignment: .top, spacing: 0) {       /// Contains a NavigationLink to a given place detailed informations
-                    ForEach(placesList) { place in          /// For each place (named: "place") from placesList
+                    ForEach(placesList) { place in          /// For each `place` (named: "place") from placesList
                         NavigationLink {                    /// NavigationLink directing to a places informations
                             PlaceDetail(place: place)       /// Re-directs to PlaceDetail( ) view for the given place
                         } label: {
