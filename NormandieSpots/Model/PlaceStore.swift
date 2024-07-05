@@ -12,7 +12,7 @@ import SwiftUI
 class PlaceStore: ObservableObject {
     
     // MARK: Variables
-    /// `places`: [Place] - Array of places` initialized
+    /// Array of `places`
     @Published var places: [Place] = []
     
     // MARK: Functions
