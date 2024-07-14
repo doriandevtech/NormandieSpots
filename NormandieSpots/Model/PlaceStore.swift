@@ -5,24 +5,25 @@
 //  Created by Dorian Emenir on 14/05/2024.
 //
 
-// MARK: Imports
+// MARK: - Imports
 import SwiftUI
 
-@MainActor // Make the `PlaceStore` class as the starting point of the app NormandieSpots
+// MARK: - PlaceStore
+@MainActor /// Make the `PlaceStore` class as the starting point of the app NormandieSpots
 class PlaceStore: ObservableObject {
     
-    // MARK: Variables
+    // MARK: - Variables
     /// Array of `places`
     @Published var places: [Place] = []
     
-    // MARK: Functions
-    /// `fileURL()` - declares a file "places.data" to store datas
+    // MARK: - Functions
+    /// Declares a file "places.data" to store datas
     private static func fileURL() throws -> URL {
         try FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
             .appendingPathComponent("places.data")
     }
     
-    /// `load()` - loads the datas from a given file
+    /// Loads the datas from a given file
     func load() async throws {
         let task = Task<[Place], Error>{
             let fileURL = try Self.fileURL()
@@ -36,7 +37,7 @@ class PlaceStore: ObservableObject {
         self.places = places
     }
     
-    /// `save(places: [Place])` - saves data to a given file
+    /// Saves data to a given file
     func save(places: [Place]) async throws {
         let task = Task {
             let data = try JSONEncoder().encode(places)

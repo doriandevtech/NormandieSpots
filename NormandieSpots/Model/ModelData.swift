@@ -5,24 +5,24 @@
 //  Created by Dorian Emenir on 30/09/2023.
 //
 
-// MARK: Imports
+// MARK: - Imports
 import Foundation
 import Combine
 
-// MARK: ModelData
+// MARK: - ModelData
 /// Defines the Data Model of the app
 final class ModelData: ObservableObject {
     
-    // MARK: Variables
-    /// `places`: [Place] - Array of `places` initialized from "placesDatas.json"
+    // MARK: - Variables
+    /// Array of `places` initialized from "placesDatas.json"
     @Published var places: [Place] = load("placesDatas.json")
     
-    /// `features`: [Place] - filters the favorite places
+    /// Filters the favorite places
     var features: [Place] {
         places.filter { $0.isFeatured }
     }
     
-    /// `categories`: [String: [Place]] - creates a Dictionary of places per category
+    /// Creates a Dictionary of places per category
     var categories: [String: [Place]] {
         Dictionary(
             grouping: places,
@@ -31,10 +31,10 @@ final class ModelData: ObservableObject {
     }
 }
 
-// MARK: load()
+// MARK: - load()
 /// func `load()` - Fetches JSON data with a given name from the app's main bundle
-/// - Parameter filename: placesDatas.JSON -> datas for places displayed in the app
-/// - Returns: datas decoded from the file passed in parameter
+/// - Parameter filename: Datas for places displayed in the app
+/// - Returns: Datas decoded from the file passed in parameter
 func load<T: Decodable>(_ filename: String) -> T {
     let data: Data
     
