@@ -32,7 +32,7 @@ final class ModelData: ObservableObject {
 }
 
 // MARK: - load()
-/// func `load()` - Fetches JSON data with a given name from the app's main bundle
+/// Fetches JSON data with a given name from the app's main bundle
 /// - Parameter filename: Datas for places displayed in the app
 /// - Returns: Datas decoded from the file passed in parameter
 func load<T: Decodable>(_ filename: String) -> T {
