@@ -1,4 +1,4 @@
-#  NormandieSpots 🥾🧭🧳
+#  NormandieSpots 🥾🧭
 
 ## *NormandieSpots* lists places to go to (beaches 🏖️, cities 🏘️, countryside 🐄...) in the french region Normandie
 
@@ -16,7 +16,7 @@
 - MapKit
 
 ## Current state:
-- The v1.0.0-beta is developped and shown below 👇
+- The v1.0.0-beta is developed and shown below 👇
 
 ## Here are some screenshots of my app ⤵️:
 

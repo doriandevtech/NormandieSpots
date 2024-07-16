@@ -5,26 +5,43 @@
 //  Created by Dorian Emenir on 30/09/2023.
 //
 
-// MARK: Imports
+// MARK: - Imports
 import Foundation
 import SwiftUI
 import CoreLocation
 
-// MARK: Place
+// MARK: - Place
 /// Defines properties and structures for a given 'Place'
 struct Place: Hashable, Codable, Identifiable {
     
-    // MARK: Variables
-    var id: Int /// `id`: Int - Place's id
-    var name: String /// `id`: String - Place's name
-    var country: String /// `id`: String - Place's country
-    var description: String /// `id`: String - Place's description
-    var isFavorite: Bool /// `id`: Bool - Place's `isFavorite` attribute
-    var isFeatured: Bool /// `id`: Bool - Place's `isFeatured` attribute
-    var category: Category /// `id`: Category - Place's catgeory
+    // MARK: - Variables
+    /// Place's `id`
+    var id: Int
+    /// Place's `name`
+    var name: String
+    /// Place's `country`
+    var country: String
+    /// Place's `description`
+    var description: String
+    /// Place's `isFavorite`
+    var isFavorite: Bool
+    /// Place's `isFeatured` attribute
+    var isFeatured: Bool
+    /// Place's `category`
+    var category: Category
     
     /// Place's initialization
-    init(id: Int, name: String, country: String, description: String, isFavorite: Bool, isFeatured: Bool, category: Category, imageName: String, coordinates: Coordinates) {
+    init(
+        id: Int,
+        name: String,
+        country: String,
+        description: String,
+        isFavorite: Bool,
+        isFeatured: Bool,
+        category: Category,
+        imageName: String,
+        coordinates: Coordinates
+    ) {
         self.id = id
         self.name = name
         self.country = country
@@ -65,18 +82,39 @@ struct Place: Hashable, Codable, Identifiable {
     }
 }
 
+// MARK: - Extensions
 extension Place {
-    /// emptyPlace: Place - an empty Place's declaration
+    /// An empty Place's declaration
     static var emptyPlace: Place {
-        Place(id: 0, name: "", country: "", description: "", isFavorite: false, isFeatured: false, category: Category.commune, imageName: "", coordinates: Coordinates(latitude: 1.0, longitude: 1.0))
+        Place(
+            id: 0,
+            name: "",
+            country: "",
+            description: "",
+            isFavorite: false,
+            isFeatured: false,
+            category: Category.commune,
+            imageName: "",
+            coordinates: Coordinates(latitude: 1.0, longitude: 1.0)
+        )
     }
 }
 
 extension Place {
-    /// sampleData: [Place] - a list of pre recorded Places used as examples during build time
+    /// A list of pre recorded Places used as examples during build time
     static var sampleData: [Place] {
         [
-            Place(id: 1, name: "Name", country: "Country", description: "Description", isFavorite: true, isFeatured: true, category: Category.ville, imageName: "", coordinates: Coordinates(latitude: 0.0, longitude: 0.0))
+            Place(
+                id: 1,
+                name: "Name",
+                country: "Country",
+                description: "Description",
+                isFavorite: true,
+                isFeatured: true,
+                category: Category.ville,
+                imageName: "",
+                coordinates: Coordinates(latitude: 0.0, longitude: 0.0)
+            )
         ]
     }
     

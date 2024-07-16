@@ -5,48 +5,55 @@
 //  Created by Dorian Emenir on 30/09/2023.
 //
 
-// MARK: Imports
+// MARK: - Imports
 import SwiftUI
 
-// MARK: ContentView
+// MARK: - ContentView
 struct ContentView: View {
     
-    // MARK: Variables
-    @State private var selection: Tab = .home /// selection: Tab - "Home" view as the default view at app lauch
+    // MARK: - Variables
+    /// "Home" view as the default view at app launch
+    @State private var selection: Tab = .home
     
+    /// Binding to the list of places
     @Binding var places: [Place]
-        
-    /// Enum "Tab" contains the list of tabs
+    
+    @Environment(\.scenePhase) private var scenePhase
+    
+    let saveAction: ()->Void
+    
+    /// Contains the list of tabs
     enum Tab {
         case home
         case list
     }
     
-    // MARK: ContentView's view
-    /// Defines the content of "body" with a TabView and an item per tab
+    // MARK: - View
+    /// Defines the content of "body" with a `TabView` and an item per tab
     var body: some View {
         TabView(selection: $selection) {
-            /// CategoryHome view - "home" tabItem
-            CategoryHome()
-                .tabItem { /// CategoryHome - tabItem's content
+            CategoryHome()                  /// CategoryHome view - "home" tabItem
+                .tabItem {
                     Label("Accueil", systemImage: "house.fill")
                 }
-                .tag(Tab.home) /// CategoryHome - tab "home" link
+                .tag(Tab.home)
             
-            /// PlaceList view - "list" tabItem
-            PlaceList(places: $places)
-                .tabItem { /// PlaceList - tabItem's content
+            PlaceList(places: $places)      /// PlaceList view - "list" tabItem
+                .tabItem {
                     Label("Lieux", systemImage: "list.bullet")
                 }
-                .tag(Tab.list) /// PlaceList - tab "list" link
+                .tag(Tab.list)
+                .onChange(of: scenePhase) { phase in /// Triggers `saveAction()` if `phase` in `inactive`
+                    if phase == .inactive { saveAction() }
+                }
         }
     }
 }
 
-// MARK: Preview
+// MARK: - Preview
 struct ContentView_Preview: PreviewProvider {
     static var previews: some View {
-        ContentView(places: .constant(Place.sampleData))
+        ContentView(places: .constant(Place.sampleData), saveAction: {})
             .environmentObject(ModelData())
     }
 }

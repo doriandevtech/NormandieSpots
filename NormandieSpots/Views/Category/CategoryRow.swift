@@ -5,45 +5,45 @@
 //  Created by Dorian Emenir on 08/12/2023.
 //
 
-// MARK: Imports
+// MARK: - Imports
 import SwiftUI
 
-// MARK: CategoryRow
-/// Main aspect: CategoryRow shows the list of a places for s given category
+// MARK: - CategoryRow
+/// CategoryRow shows the list of a places for s given category
 struct CategoryRow: View {
     
-    // MARK: Variables
-    /// categoryName: String - Category's name
+    // MARK: - Variables
+    /// Category's name
     var categoryName: String
-    /// placesList: [Place] - List of places
+    /// List of places
     var placesList: [Place]
-    /// places: [Place] - List of places
+    /// List of places
     var places = ModelData().places
     
-    // MARK: CategoryRow's View
+    // MARK: - View
     var body: some View {
-        VStack(alignment: .leading) { /// Groups the category's name and a ScrollView of the linked places
-            Text(categoryName)      /// Category's name
+        VStack(alignment: .leading) {                           /// Groups the category's name and a ScrollView of the linked places
+            Text(categoryName)
                 .font(.title3)
                 .padding(.init(top: 10, leading: 20, bottom: -5, trailing: 10))
             
-            ScrollView(.horizontal, showsIndicators: false) { /// ScrollView of the places inside this category
-                HStack(alignment: .top, spacing: 0) {   /// Contains a NavigationLink to a given place detailed informations
-                    ForEach(placesList) { place in      /// For each place (named: "place") from placesList
-                        NavigationLink {                /// NavigationLink directing to a places informations
-                            PlaceDetail(place: place)   /// Re-directs to PlaceDetail( ) view for the given place
+            ScrollView(.horizontal, showsIndicators: false) {   /// ScrollView of the places inside this category
+                HStack(alignment: .top, spacing: 0) {
+                    ForEach(placesList) { place in              /// For each `place` from `placesList`
+                        NavigationLink {
+                            PlaceDetail(place: place)           /// Re-directs to PlaceDetail( ) view for the given place
                         } label: {
-                            CategoryItem(place: place)  /// Shows the CategoryItem view for the given place
+                            CategoryItem(place: place)          /// Shows the CategoryItem view for the given place
                         }
                     }
                 }
             }
-            .frame(height: 185) /// ScrollView's height
+            .frame(height: 185) 
         }
     }
 }
 
-// MARK: Preview
+// MARK: - Preview
 struct CategoryRow_Preview: PreviewProvider {
     static var places = ModelData().places
     

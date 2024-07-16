@@ -5,47 +5,48 @@
 //  Created by Dorian Emenir on 13/10/2023.
 //
 
-// MARK: Imports
+// MARK: - Imports
 import SwiftUI
 
-// MARK: PlacesList
-/// Main aspect :  PlaceList configures a list of places
-/// sub aspects : PlaceList can filter places using there "isFavorite" attribute
+// MARK: - PlacesList
+/// Main aspect :  `PlaceList` configures a list of `places`
+/// sub aspects : PlaceList can filter places using there isFavorite` attribute
 struct PlaceList: View {
     
-    // MARK: Variables
-    /// modelData: ModelData - Declares modelData as an EnvironmentObject
+    // MARK: - Variables
+    /// Declares `modelData as an EnvironmentObject
     @EnvironmentObject var modelData: ModelData
 
-    /// showFavOnly: Bool - State variable for the "Show favorite" toggle
+    /// State variable for the "Show favorite" toggle
     @State private var showFavOnly = false
     
-    /// showDeleteAlert: Bool - State variable for the "Delete alert" popup
+    /// State variable for the "Delete alert" popup
     @State private var showDeleteAlert = false
     
-    /// isPresentingNewSpotView: Bool - State variable for the showing of NewPlaceView( ) view
+    /// State variable for the showing of NewPlaceView( ) view
     @State private var isPresentingNewSpotView = false
     
-    /// places: [Places] - Binding to the list of places
+    /// Binding to the list of places
     @Binding var places: [Place]
     
-    /// filteredPlaces: [Place] - filters the favorite places from the list of places
-    /// shows only favorite places when "Show favorite" toggle is on
+    /// Filters the favorite places from the list of places shows only favorite places when "Show favorite" toggle is on
     var filteredPlaces: [Place] {
         modelData.places.filter { place in
             (!showFavOnly || place.isFavorite)
         }
     }
     
-    // MARK: PlaceList's view    
+    // MARK: - View
     var body: some View {
         NavigationView {
             List {
-                Toggle(isOn: $showFavOnly, label: { /// Adds a isFavorite toggle item
+                /// Adds a `isFavorite` toggle item
+                Toggle(isOn: $showFavOnly, label: {
                     Text("Favoris")
                 })
                 
-                ForEach(filteredPlaces) { place in  /// Each place has a link from PlaceRow( ) redirecting to its PlaceDetail( ) view
+                /// Each `place` has a link from `PlaceRow()` redirecting to its `PlaceDetail()` view
+                ForEach(filteredPlaces) { place in
                     NavigationLink {
                         PlaceDetail(place: place)
                     } label: {
@@ -81,7 +82,7 @@ struct PlaceList: View {
                     }
                 )
             }
-            .toolbar {                              /// "+" button toggling the NewPlaceView( ) when pressed
+            .toolbar {                              /// "+" button toggling the `NewPlaceView()` when pressed
                 Button(action: {
                     isPresentingNewSpotView = true
                 }) {
@@ -90,13 +91,16 @@ struct PlaceList: View {
                 .accessibilityLabel("Ajout d'un nouveau lieu")
             }
             .sheet(isPresented: $isPresentingNewSpotView) {
-                NewPlaceView(places: $places, isPresentingNewPlaceSheet: $isPresentingNewSpotView)
+                NewPlaceView(
+                    places: $places,
+                    isPresentingNewPlaceSheet: $isPresentingNewSpotView
+                )
             }
         }
     }
 }
 
-// MARK: Preview
+// MARK: - Preview
 struct PlaceList_Previews: PreviewProvider {
     static var previews: some View {
         PlaceList(places: .constant(Place.sampleData))

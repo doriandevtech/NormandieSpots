@@ -5,18 +5,17 @@
 //  Created by Dorian Emenir on 09/11/2023.
 //
 
-// MARK: Imports
+// MARK: - Imports
 import SwiftUI
 
-// MARK: CircleImage
+// MARK: - CircleImage
 /// Configures an item's image as a circle image
 struct CircleImage: View {
     
-    // MARK: Variables
-    /// Variable "image" declaration
+    // MARK: - Variables
     var image: Image
     
-    // MARK: CircleImage's view
+    // MARK: - View
     /// Body contains the image passed in parameter modified by some modifiers
     var body: some View {
         image
@@ -30,7 +29,7 @@ struct CircleImage: View {
     }
 }
 
-// MARK: Preview
+// MARK: - Preview
 #Preview {
     CircleImage(image: Image("etretat"))
 }
